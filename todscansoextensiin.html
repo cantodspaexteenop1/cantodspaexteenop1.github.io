@@ -121,23 +121,7 @@ else if (getURL == "Q2FuYWxfNV9Sb3Nhcmlv" || getURL == "VEVMRUZVVFVST19DNA==" ||
 number = 4;
 else
 number = 3;
-        // Función para verificar si es Windows y PC
-        function isWindowsPC() {
-            const userAgent = navigator.userAgent.toLowerCase();
-            return /windows/.test(userAgent) && !/windows phone/.test(userAgent);
-        }
 
-        // Función para mostrar el mensaje de dispositivo no compatible
-        function showUnsupportedDeviceMessage() {
-            const unsupportedMessage = document.createElement('div');
-            unsupportedMessage.classList.add('alert-card');
-            unsupportedMessage.innerHTML = `
-                <i class='bx bx-error-circle boxicon'></i>
-                <h2>Dispositivo no compatible</h2>
-                <p>Este sitio es compatible solo con PC con Windows. Por favor, usa un PC para acceder.</p>
-            `;
-            document.body.appendChild(unsupportedMessage);
-        }
 
         // Verificar si es un dispositivo compatible antes de ejecutar el código principal
         if (!isWindowsPC()) {
