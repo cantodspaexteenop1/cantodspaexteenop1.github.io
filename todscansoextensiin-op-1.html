@@ -15,9 +15,7 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
     <link rel="stylesheet" href="https://pramennudeewebseitee.github.io/bootstrap.min-extensioness.css">
   
-  
-<style>
-        body {
+ body {
             background-color: #000;
             color: #fff;
             margin: 0;
@@ -25,13 +23,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100%;
+            height: 100vh;
             font-family: Arial, sans-serif;
         }
 
         .container {
             width: 100%;
-            height: 100%;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -39,14 +37,14 @@
         }
 
         #player {
-            position: center;
+            position: relative;
             width: 100%;
             padding-top: 56.25%; /* Aspect ratio 16:9 */
             background: #000;
         }
 
         #player iframe {
-            position: center;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
