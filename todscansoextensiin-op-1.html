@@ -186,10 +186,11 @@
                         const unsupportedMessage = document.createElement('div');
                         unsupportedMessage.classList.add('hidden','alert-card', 'text-center', 'bg-dark', 'bg-gradient');
                         unsupportedMessage.innerHTML = `
-    <i class='bx bx-error-circle boxicon'></i>
+    <center><i class='bx bx-error-circle boxicon'></i>
        <h2>Dispositivo no compatible</h2>
      <p>Esta Opción es solo para Computadoras/Notebook con Windows use una</p>
-      <p> Computadoras/Notebook para Acceder.</p>
+      <p> Computadoras/Notebook para Acceder.</p></center>
+      
    `;
                         document.querySelector(".container").style.display = "none";
                         document.body.appendChild(unsupportedMessage);
