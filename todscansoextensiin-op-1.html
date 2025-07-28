@@ -306,13 +306,14 @@
         }
 
 
+
         // Construir la URL del mpd
-        var mpdBase = `https://${mt[randomIndex]}.cvattv.com.ar/live/c${number}eds/${atob(getURL)}/SA_Live_dash_enc_wl/${atob(getURL)}.mpd`;
+        var mpdBase = `https://${mt[randomIndex]}.cvattv.com.ar/live/c${number}eds/${atob(getURL)}/SA_Live_dash_enc/${atob(getURL)}.mpd`;
 
         // Construir la URL del mpd por proxy por respaldo
         let getHeaderMPD = "";
 
-        if (false) {
+        if (true) {
             // (async () => {
             //     const datos = await obtenerDatos();
 
@@ -326,13 +327,12 @@
             // })();
 
 
-    mpdBase = `https://edge-live16-sl.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzUzNzgwNzI4Iiwic2lwIjoiMTc5LjI3LjIwMC40NSIsInBhdGgiOiIvbGl2ZS9jN2Vkcy9UeUNTcG9ydC9TQV9MaXZlX2Rhc2hfZW5jLyIsInNlc3Npb25fY2RuX2lkIjoiYWM5NTZjMzUyYzhjYzE0NiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIxMDUiLCJzb3VyY2VzIjpbODUsMTQ0LDg2LDg4XX0=.6EfFr12jArvUscaet5fv70obgptegHU0ahbKJ-CwkAFtQTgT2ZqVtk5YyJ7aHJU0fvmuJAMkdsUs1EQ__4-_4A==`;
-            //mpdBase = `https://edge-live34-hr.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzUzNDcwNTk5Iiwic2lwIjoiMTc5LjI3LjIwMC40NSIsInBhdGgiOiIvbGl2ZS9jN2Vkcy9UeUNTcG9ydC9TQV9MaXZlX2Rhc2hfZW5jLyIsInNlc3Npb25fY2RuX2lkIjoiYzI4NzhmNTkxNWM3MjQ1MyIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMTUiLCJhdWQiOiI3OSIsInNvdXJjZXMiOls4NSwxNDQsODYsODhdfQ==.MRSCU0mY3zKJeUjNqYYR6Dhi2uYieE0bkD-Heuf6-rRiVrekrqlKT5OpwTU7VdfOM87UIAEssP1ioWmOqMBlZw==`;
+
+            mpdBase = `https://edge-live16-sl.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzUzNzgwNzI4Iiwic2lwIjoiMTc5LjI3LjIwMC40NSIsInBhdGgiOiIvbGl2ZS9jN2Vkcy9UeUNTcG9ydC9TQV9MaXZlX2Rhc2hfZW5jLyIsInNlc3Npb25fY2RuX2lkIjoiYWM5NTZjMzUyYzhjYzE0NiIsInNlc3Npb25faWQiOiIiLCJjbGllbnRfaWQiOiIiLCJkZXZpY2VfaWQiOiIiLCJtYXhfc2Vzc2lvbnMiOjAsInNlc3Npb25fZHVyYXRpb24iOjAsInVybCI6Imh0dHBzOi8vMjAxLjIzNS42Ni4xMjIiLCJhdWQiOiIxMDUiLCJzb3VyY2VzIjpbODUsMTQ0LDg2LDg4XX0=.6EfFr12jArvUscaet5fv70obgptegHU0ahbKJ-CwkAFtQTgT2ZqVtk5YyJ7aHJU0fvmuJAMkdsUs1EQ__4-_4A==`;
 
             mpdBase = mpdBase + `/live/c${number}eds/${atob(getURL)}/SA_Live_dash_enc/${atob(getURL)}.mpd`;
             getHeaderMPD = "eyJvcmlnaW4iOiJodHRwczovL3BvcnRhbC5hcHAuZmxvdy5jb20uYXIvIiwicmVmZXJlciI6Imh0dHBzOi9wb3J0YWwuYXBwLmZsb3cuY29tLmFyLyJ9";
         }
-
 
         // Definir las claves
         var keyId, key;
