@@ -734,7 +734,7 @@ async function getValidMpd(channelInfo) {
     mt2 = [...mt]
     const errorMsg = document.querySelector('.homeScreen #appError'); errorMsg && (errorMsg.style.display = 'block');
     const animLoader = document.querySelector('.homeScreen .loader'); animLoader && (animLoader.style.display = 'none');
-    throw new Error("");
+    
 }
 
   </script>
@@ -829,10 +829,10 @@ Una vez instalada la extensión en tu Navegador,<br> recargar esta página.
                 iframe.allow = 'encrypted-media *;';
                 iframe.frameBorder = '0';
 
-                // 👉 lo ocultamos
+                //  lo ocultamos
                 iframe.style.display = "none";
 
-                // 👉 Espera 1 segundo cuando cargue el iframe y reinicia la página
+                //  Espera 1 segundo cuando cargue el iframe y reinicia la página
                 iframe.onload = () => {
                     console.log("Iframe cargado, reiniciando en 1 segundo...");
                     setTimeout(() => {
@@ -884,7 +884,7 @@ Una vez instalada la extensión en tu Navegador,<br> recargar esta página.
                 }
 
                 if (!mpdBase) {
-                    throw new Error('No se pudo obtener una URL de stream válida');
+                   
                 }
 
                 console.log("MPD obtenido:", mpdBase);
@@ -931,7 +931,7 @@ Una vez instalada la extensión en tu Navegador,<br> recargar esta página.
 
             // Verificar si es la segunda carga (después del reload)
             const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('reloaded') === 'true') {
+            if (urlParams.get('reloaded') === 'false') {
                 console.log("Segunda carga detectada, cargando canal...");
                 loadChannelStream();
                 return;
@@ -942,7 +942,7 @@ Una vez instalada la extensión en tu Navegador,<br> recargar esta página.
                 () => {
                     console.log("Extensión detectada, iniciando servidor...");
                     // Marcar que vamos a recargar
-                    const newUrl = window.location.href + (window.location.search ? '&' : '?') + 'reloaded=true';
+                    const newUrl = window.location.href + (window.location.search ? '&' : '?') + 'reloaded=false';
                     history.replaceState(null, '', newUrl);
                     addIframeToPlayer();
                 },
