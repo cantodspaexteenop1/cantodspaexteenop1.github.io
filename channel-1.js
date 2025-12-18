@@ -315,7 +315,7 @@ async function getURLwithToken() {
     let token = sessionStorage.getItem('token')
     if (!token) {
         // const url = 'https://chromecast.cvattv.com.ar/live/c7eds/La_Nacion/SA_Live_dash_enc_C/La_Nacion.m3u8';
-        const url = 'https://chromecast.cvattv.com.ar/live/c3eds/ESPN2HD/SA_Live_dash_enc_c/ESPN2HD.m3u8';
+        const url = 'https://chromecast.cvattv.com.ar/live/c7eds/La_Nacion/SA_Live_dash_enc_C/La_Nacion.m3u8';
         let response = await fetch(url, { signal: AbortSignal.timeout(5000) });
         if (response.redirected) {
             const regex = /(https:\/\/.+?)(?=\/live)/;
