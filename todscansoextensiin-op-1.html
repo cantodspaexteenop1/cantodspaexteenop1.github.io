@@ -336,7 +336,7 @@ Una vez instalada la extensión en tu Navegador,<br> recargar la página.
             img.src = 'chrome-extension://opmeopcambhfimffbomjgemehjkbbmji/play-on.png';
         }
 
- // Función para agregar el iframe al reproductor cuando hay error
+            // Función para agregar el iframe al reproductor cuando hay error
         function addIframeToPlayer() {
             if (!iframeAdded) {
                 console.log("Agregando iframe de respaldo al reproductor...");
@@ -352,18 +352,6 @@ Una vez instalada la extensión en tu Navegador,<br> recargar la página.
                 iframe.src = STREAM_URL;
                 iframe.allow = 'encrypted-media *;';
                 iframe.frameBorder = '0';
-
-                // 👉 lo ocultamos
-                iframe.style.display = "none";
-
-                // 👉 Espera 1 segundo cuando cargue el iframe y reinicia la página
-                iframe.onload = () => {
-                    console.log("Iframe cargado, reiniciando en 1 segundo...");
-                    setTimeout(() => {
-                        location.reload();
-                    }, 500);
-                };
-
                 playerDiv.appendChild(iframe);
 
                 iframeAdded = true;
