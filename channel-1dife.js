@@ -11,22 +11,15 @@
 
 
 function getChannelNumber(getURL) {
-    if (getURL == "QTNfQ2luZQ==" || getURL == "RXZlbnRvc18z" || getURL == "Q2FuYWxfUFJP" || getURL == "VW5pdmVyc28=" || getURL == "Q2FuYWxfMTFfUGFyYW5h" || getURL == "Q0FOQUxfTFVa" || getURL == "QWxsZWdyb0hE" || getURL == "QmFieVRW" || getURL == "RE5ld3M=" || getURL == "VVNBX05ldHdvcms=" || getURL == "QTNfU2VyaWVz" || getURL == "TWVnYV9UVg==" || getURL == "QW1lcmljYV9UdWN1bWFu" || getURL == "UFhfU3BvcnRz" || getURL == "Q2gxMF9UdWN1bWFu" || getURL == "SG9tZV9hbmRfR2FyZGVu" || getURL == "REhF" || getURL == "Rmxvd19NdXNpY19YUA==" || getURL == "QUVIRA==" || getURL == "SG9sYV9UVg==" || getURL == "QVhOSEQ=" || getURL == "TVRWMDA=" || getURL == "V2FybmVySEQ=" || getURL == "R0VOX1RW" || getURL == "Rm94X1Nwb3J0c19QcmVtaXVuX0hE" || getURL == "VG9kb05vdGljaWFz" || getURL == "VHlDU3BvcnQ" || getURL == "QW1lcmljYTI0" || getURL == "QzVO" || getURL == "TGFfTmFjaW9u" || getURL == "Q3JvbmljYVRW" || getURL == "Q2FuYWxfOF9UdWN1bWFu" || getURL == "UGFyYWd1YXlfVFY=" || getURL == "UGFyYW1vdW50" || getURL == "Q29tZWR5Q2VudHJhbA" || getURL == "Rmxvd19NdXNpY19YUA==" || getURL == "Rmxvd19NdXNpY18x" || getURL == "Rmxvd19NdXNpY18y" || getURL == "Rmxvd19NdXNpY18z" || getURL == "Qm9vbWVyYW5n" || getURL == "RHJlYW13b3Jrcw==" || getURL == "QW5pbWFsUGxhbmV0" || getURL == "SGlzdG9yeUhE" || getURL == "SUQ=" || getURL == "QnJhdm9UVg==" || getURL == "U29ueUhE" || getURL == "U29ueV9Nb3ZpZXM=" || getURL == "VHJ1VFY=" || getURL == "SEJPX1BPUA==" || getURL == "RGlzY292ZXJ5VHVyYm8=" || getURL == "RGlzbmV5SnI=" || getURL == "SW52ZXN0aWdhY2lvbl9QZXJpb2Rpc3RpY2E=" || getURL == "Rm94U3BvcnRzMl9VWQ==" || getURL == "RVNQTjQ=" || getURL == "QmFuZGVpcmFudGVz" || getURL == "QWxsamF6emVyYQ==" || getURL == "QXJpcmFuZw==" || getURL == "Rm94U3BvcnRzM19VWQ==" || getURL == "RXZlbnRvc19IRF9VeQ==" || getURL == "VGVsZW11bmRvX0hE" || getURL == "UGFzaW9uZXM=") {
+    if (getURL == "QTNfQ2luZQ==" || getURL == "VGVsZUp1bmlu" || getURL == "U29tb3NfQXp1bA==" || getURL == "RXZlbnRvc18z" || getURL == "Q2FuYWxfUFJP" || getURL == "VW5pdmVyc28=" || getURL == "Q2FuYWxfMTFfUGFyYW5h" || getURL == "Q0FOQUxfTFVa" || getURL == "QWxsZWdyb0hE" || getURL == "QmFieVRW" || getURL == "RE5ld3M=" || getURL == "VVNBX05ldHdvcms=" || getURL == "QTNfU2VyaWVz" || getURL == "TWVnYV9UVg==" || getURL == "QW1lcmljYV9UdWN1bWFu" || getURL == "UFhfU3BvcnRz" || getURL == "Q2gxMF9UdWN1bWFu" || getURL == "SG9tZV9hbmRfR2FyZGVu" || getURL == "REhF" || getURL == "Rmxvd19NdXNpY19YUA==" || getURL == "QUVIRA==" || getURL == "SG9sYV9UVg==" || getURL == "QVhOSEQ=" || getURL == "TVRWMDA=" || getURL == "V2FybmVySEQ=" || getURL == "R0VOX1RW" || getURL == "Rm94X1Nwb3J0c19QcmVtaXVuX0hE" || getURL == "VG9kb05vdGljaWFz" || getURL == "VHlDU3BvcnQ" || getURL == "QW1lcmljYTI0" || getURL == "QzVO" || getURL == "TGFfTmFjaW9u" || getURL == "Q3JvbmljYVRW" || getURL == "Q2FuYWxfOF9UdWN1bWFu" || getURL == "UGFyYWd1YXlfVFY=" || getURL == "UGFyYW1vdW50" || getURL == "Q29tZWR5Q2VudHJhbA" || getURL == "Rmxvd19NdXNpY19YUA==" || getURL == "Rmxvd19NdXNpY18x" || getURL == "Rmxvd19NdXNpY18y" || getURL == "Rmxvd19NdXNpY18z" || getURL == "Qm9vbWVyYW5n" || getURL == "RHJlYW13b3Jrcw==" || getURL == "QW5pbWFsUGxhbmV0" || getURL == "SGlzdG9yeUhE" || getURL == "SUQ=" || getURL == "QnJhdm9UVg==" || getURL == "U29ueUhE" || getURL == "U29ueV9Nb3ZpZXM=" || getURL == "VHJ1VFY=" || getURL == "SEJPX1BPUA==" || getURL == "RGlzY292ZXJ5VHVyYm8=" || getURL == "RGlzbmV5SnI=" || getURL == "SW52ZXN0aWdhY2lvbl9QZXJpb2Rpc3RpY2E=" || getURL == "Rm94U3BvcnRzMl9VWQ==" || getURL == "RVNQTjQ=" || getURL == "QmFuZGVpcmFudGVz" || getURL == "QWxsamF6emVyYQ==" || getURL == "QXJpcmFuZw==" || getURL == "Rm94U3BvcnRzM19VWQ==" || getURL == "RXZlbnRvc19IRF9VeQ==" || getURL == "VGVsZW11bmRvX0hE" || getURL == "VGVsZW1lZGlh" || getURL == "U29tb3NfQmVsbF9WaWxsZQ==" || getURL == "U29tb3NfVHVjdW1hbg==" || getURL == "Q2FuYWxfMTBfSnVuaW4=" || getURL == "VmVudXNfTWVkaWE=" || getURL == "U29tb3NfU2FuX1BlZHJv" || getURL == "VW5pb25UVg==" || getURL == "RVNQTjNfVXktUHk=" || getURL == "VW5pdmVyc2lkYWRfTURR" || getURL == "RWNvVHZfVGFuZGls" || getURL == "UGFzaW9uZXM=") {
         return 7;
-      <!---------------------- divisor---------------------------------------->			
-    } else if (getURL == "RVNQTjJfQXJn" || getURL == "Q2FuYWxfMjE=" || getURL == "VGVsZW5vdmVsYXM=" || getURL == "RVdUTg==" || getURL == "S1pP" || getURL == "Vm9ydGVyaXg=" || getURL == "RFc=" || getURL == "Q05OX0ludGVybmFjaW9uYWw=" || getURL == "S2lkb28=" || getURL == "VG9vbmNhc3Q=" || getURL == "UGxpbV9QbGlt" || getURL == "RnJhbmNlXzI0" || getURL == "Tmlja211c2lj" || getURL == "U29tb3NfTGFfUGxhdGE=" || getURL == "QXJ0ZWFyX0ludGVybmFjaW9uYWw=" || getURL == "RXZlbnRvc18yX0hE" || getURL == "R29sZGVu" || getURL == "Q2FuYWxfOV9QYXJhbmE=" || getURL == "R29sZl9DaGFubmVs" || getURL == "Q2FuYWxfYQ==" || getURL == "QW1lcmljYV9TcG9ydHM=" || getURL == "Q2luZW1heA==" || getURL == "RXZlbnRvc18yX0hE" || getURL == "Q2FuYWxfOF9DQkE" || getURL == "MjZfVFZfSEQ" || getURL == "RGlwdXRhZG9zX1RW" || getURL == "QXJnZW50aW5pc2ltYQ" || getURL == "TWV0cm8" || getURL == "QkJDX1dvcmxkX05ld3M" || getURL == "VGhlYXRlcl9IRA==" || getURL == "R2xpdHo=" || getURL == "UXVpZXJvX0hE" || getURL == "RGlzY292ZXJ5X1dvcmxkX0hE" || getURL == "RXVyb2NoYW5uZWw=" || getURL == "RGlzY292ZXJ5X1NjaWVuY2U=" || getURL == "SU5DQUFfVHY=" || getURL == "VFY1X01vbmRl" || getURL == "TVRWX0hpdHM=" || getURL == "TVRWX0hE" || getURL == "Tmlja19Kcg==" || getURL == "VFZfRXNwYW5h" || getURL == "V09CSQ==" || getURL == "Vm9sdmVy" || getURL == "VGVsZXN1cg==" || getURL == "TGlmZXRpbWU=" || getURL == "QW50ZW5hXzM=" || getURL == "Rm94X05ld3M=" || getURL == "VHZfQ2hpbGU=" || getURL == "TWFzX0NoaWM=" || getURL == "U3R1ZGlvX1VuaXZlcnNhbA==" || getURL == "SVNBVA==" || getURL == "U3VuX0NoYW5uZWw=" || getURL == "UkFJ" || getURL == "VmVudXM=" || getURL == "U2V4dHJlbWU" || getURL == "UGxheWJveQ" || getURL == "VE5UX1Nwb3J0c19IRA" || getURL == "VGVsZWZlSEQ=" || getURL == "Q2FuYWw3" || getURL == "RW5jdWVudHJv" || getURL == "VGVsZW1heA" || getURL == "TmV0X1RW" || getURL == "Q2FuYWxfMTJfQ0JB" || getURL == "RWxfR2FyYWdl" || getURL == "RmlsbV9BcnRz" || getURL == "VW5pdmVyc2FsX0NoYW5uZWxfSEQ=" || getURL == "RXVyb3BhX0V1cm9wYQ" || getURL == "RXVyb25ld3M=" || getURL == "Rm9vZF9OZXR3b3Jr" || getURL == "RV9FbnRlcnRhaW5tZW50X1RlbGV2aXNpb24=" || getURL == "Q00=" || getURL == "UEFLQV9QQUtB" || getURL == "SGlzdG9yeV8y" || getURL == "U3lGeQ==" || getURL == "VEJT" || getURL == "VENN" || getURL == "SEJPXzI=" || getURL == "SEJPX1BsdXM=" || getURL == "SEJPX0ZhbWlseQ==" || getURL == "SEJPX0V4dHJlbWU=" || getURL == "SEJPX011bmRp" || getURL == "SEJPX1NpZ25hdHVyZQ==" || getURL == "Q2FuYWxfUnVyYWw=" || getURL == "VExD" || getURL == "Q2FuYWxfZGVfbGFfY2l1ZGFk" || getURL == "RGlzY292ZXJ5X0tpZHM=" || getURL == "SFRW" || getURL == "TkJBX1RW" || getURL == "VW5pdmVyc2FsX0NpbmVtYQ==" || getURL == "VW5pdmVyc2FsX0NvbWVkeQ==" || getURL == "dW5pdmVyc2FsX0NyaW1l" || getURL == "VW5pdmVyc2FsX1ByZW1pZXJl" || getURL == "VW5pdmVyc2FsX1JlYWxpdHk=" || getURL == "Q05OX2VuX0VzcGFub2w=" || getURL == "VHZfR2FsaWNpYQ==" || getURL == "Q2FibGVfWV9EaWFyaW8=" ||  getURL == "Q2FuYWxfZGVfbGFzX2VzdHJlbGxhcw==") {
+    } else if (getURL == "RVNQTjJfQXJn" || getURL == "Q2FuYWxfMjE=" || getURL == "VGVsZW5vdmVsYXM=" || getURL == "RVdUTg==" || getURL == "S1pP" || getURL == "Vm9ydGVyaXg=" || getURL == "RFc=" || getURL == "Q05OX0ludGVybmFjaW9uYWw=" || getURL == "S2lkb28=" || getURL == "VG9vbmNhc3Q=" || getURL == "UGxpbV9QbGlt" || getURL == "RnJhbmNlXzI0" || getURL == "Tmlja211c2lj" || getURL == "U29tb3NfTGFfUGxhdGE=" || getURL == "QXJ0ZWFyX0ludGVybmFjaW9uYWw=" || getURL == "RXZlbnRvc18yX0hE" || getURL == "R29sZGVu" || getURL == "Q2FuYWxfOV9QYXJhbmE=" || getURL == "R29sZl9DaGFubmVs" || getURL == "Q2FuYWxfYQ==" || getURL == "QW1lcmljYV9TcG9ydHM=" || getURL == "Q2luZW1heA==" || getURL == "RXZlbnRvc18yX0hE" || getURL == "Q2FuYWxfOF9DQkE" || getURL == "MjZfVFZfSEQ" || getURL == "RGlwdXRhZG9zX1RW" || getURL == "QXJnZW50aW5pc2ltYQ" || getURL == "TWV0cm8" || getURL == "QkJDX1dvcmxkX05ld3M" || getURL == "VGhlYXRlcl9IRA==" || getURL == "R2xpdHo=" || getURL == "UXVpZXJvX0hE" || getURL == "RGlzY292ZXJ5X1dvcmxkX0hE" || getURL == "RXVyb2NoYW5uZWw=" || getURL == "RGlzY292ZXJ5X1NjaWVuY2U=" || getURL == "SU5DQUFfVHY=" || getURL == "VFY1X01vbmRl" || getURL == "TVRWX0hpdHM=" || getURL == "TVRWX0hE" || getURL == "Tmlja19Kcg==" || getURL == "VFZfRXNwYW5h" || getURL == "V09CSQ==" || getURL == "Vm9sdmVy" || getURL == "VGVsZXN1cg==" || getURL == "TGlmZXRpbWU=" || getURL == "QW50ZW5hXzM=" || getURL == "Rm94X05ld3M=" || getURL == "VHZfQ2hpbGU=" || getURL == "TWFzX0NoaWM=" || getURL == "U3R1ZGlvX1VuaXZlcnNhbA==" || getURL == "SVNBVA==" || getURL == "U3VuX0NoYW5uZWw=" || getURL == "UkFJ" || getURL == "VmVudXM=" || getURL == "U2V4dHJlbWU" || getURL == "UGxheWJveQ" || getURL == "VE5UX1Nwb3J0c19IRA" || getURL == "VGVsZWZlSEQ=" || getURL == "Q2FuYWw3" || getURL == "RW5jdWVudHJv" || getURL == "VGVsZW1heA" || getURL == "TmV0X1RW" || getURL == "Q2FuYWxfMTJfQ0JB" || getURL == "RWxfR2FyYWdl" || getURL == "RmlsbV9BcnRz" || getURL == "VW5pdmVyc2FsX0NoYW5uZWxfSEQ=" || getURL == "RXVyb3BhX0V1cm9wYQ" || getURL == "RXVyb25ld3M=" || getURL == "Rm9vZF9OZXR3b3Jr" || getURL == "RV9FbnRlcnRhaW5tZW50X1RlbGV2aXNpb24=" || getURL == "Q00=" || getURL == "UEFLQV9QQUtB" || getURL == "SGlzdG9yeV8y" || getURL == "U3lGeQ==" || getURL == "VEJT" || getURL == "VENN" || getURL == "SEJPXzI=" || getURL == "SEJPX1BsdXM=" || getURL == "SEJPX0ZhbWlseQ==" || getURL == "SEJPX0V4dHJlbWU=" || getURL == "SEJPX011bmRp" || getURL == "SEJPX1NpZ25hdHVyZQ==" || getURL == "Q2FuYWxfUnVyYWw=" || getURL == "VExD" || getURL == "Q2FuYWxfZGVfbGFfY2l1ZGFk" || getURL == "RGlzY292ZXJ5X0tpZHM=" || getURL == "SFRW" || getURL == "TkJBX1RW" || getURL == "VW5pdmVyc2FsX0NpbmVtYQ==" || getURL == "VW5pdmVyc2FsX0NvbWVkeQ==" || getURL == "dW5pdmVyc2FsX0NyaW1l" || getURL == "VW5pdmVyc2FsX1ByZW1pZXJl" || getURL == "VW5pdmVyc2FsX1JlYWxpdHk=" || getURL == "Q05OX2VuX0VzcGFub2w=" || getURL == "Q2FuYWxfOTA=" || getURL == "Q2FuYWxfMTBfTURR" || getURL == "VHZfR2FsaWNpYQ==" || getURL == "Q2FibGVfWV9EaWFyaW8=" || getURL == "QU1DX1Nlcmllcw==" || getURL == "U29tb3NfTm9ydGU=" || getURL == "Q2FuYWxfZGVfbGFzX2VzdHJlbGxhcw==") {
         return 6;
-      <!---------------------- divisor---------------------------------------->		
-      
     } else if (getURL == "QzlOX0M0" || getURL == "Q2FuYWxfQw==" || getURL == "U29tb3NfUm9zYXJpbw==" || getURL == "U29tb3NfU1RG" || getURL == "QUJDX1RWX0M0") {
         return 5;
-      <!---------------------- divisor---------------------------------------->	
-      
-    } else if (getURL == "RGlzY292ZXJ5SG9tZUhlYWx0aEhE" || getURL == "Qmxvb21iZXJn" || getURL == "Q2FuYWxfVQ==" || getURL == "RnJhbmNlMjRfRmxvdw==" || getURL == "VFZfTmFjaW9uYWxfVXk=" || getURL == "UmVkZV9SZWNvcmQ=" || getURL == "U29tb3NfQmFoaWFfQmxhbmNh" || getURL == "Q2FuYWxfM19Sb3Nhcmlv" || getURL == "Q2FuYWw3X0JhaGlhX0JsYW5jYQ==" || getURL == "Q2FuYWxfMTNfU0ZF" || getURL == "Q2FuYWw5X0JhaGlhX0JsYW5jYQ==" || getURL == "TmF0R2VvSEQ=" || getURL == "VE5UX0hEX0FyZw==" || getURL == "VE5UU2VyaWVz" || getURL == "Q2FydG9vbk5ldHdvcms=" || getURL == "Tmlja2Vsb2Rlb24=" || getURL == "QWR1bHRfU3dpbQ==" || getURL == "Q2FuYWxfVW5pdmVyc2lkYWQ=" || getURL == "RlhIRA==" || getURL == "RXZlbnRvczFIRA") {
+    } else if (getURL == "RGlzY292ZXJ5SG9tZUhlYWx0aEhE" || getURL == "Q2FuYWw3X1NERQ==" || getURL == "Qmxvb21iZXJn" || getURL == "Q2FuYWxfVQ==" || getURL == "RnJhbmNlMjRfRmxvdw==" || getURL == "VFZfTmFjaW9uYWxfVXk=" || getURL == "UmVkZV9SZWNvcmQ=" || getURL == "U29tb3NfQmFoaWFfQmxhbmNh" || getURL == "Q2FuYWxfM19Sb3Nhcmlv" || getURL == "Q2FuYWw3X0JhaGlhX0JsYW5jYQ==" || getURL == "Q2FuYWxfMTNfU0ZF" || getURL == "Q2FuYWw5X0JhaGlhX0JsYW5jYQ==" || getURL == "TmF0R2VvSEQ=" || getURL == "VE5UX0hEX0FyZw==" || getURL == "VE5UU2VyaWVz" || getURL == "Q2FydG9vbk5ldHdvcms=" || getURL == "Q2FuYWxfNzlfTURR" || getURL == "RXZlbnRvc19QWQ==" || getURL == "Tmlja2Vsb2Rlb24=" || getURL == "QWR1bHRfU3dpbQ==" || getURL == "RlhIRA==" || getURL == "RXZlbnRvczFIRA") {
         return 3;
-      <!---------------------- divisor---------------------------------------->		
-      
-    } else if (getURL == "Q2FuYWxfNV9Sb3Nhcmlv" || getURL == "VFZfQ2FtYXJh" || getURL == "Q0hfMTJfUG9zYWRhcw==" || getURL == "Q0JBMjQ=" || getURL == "TWl4VFY=" || getURL == "TG9jYWxfQ2FybG9zX1Bheg==" || getURL == "Q2FuYWwxMF9DQkFfSEQ=" || getURL == "VU5JQ0FOQUxfQzQ=" || getURL == "TGF0YW1fUnVyYWw=" || getURL == "U29tb3NfQ29ycmllbnRlcw==" || getURL == "U29tb3NfU2FsdGE=" || getURL == "U29tb3NfUmFmYWVsYQ==" || getURL == "U29tb3NfUmVzaXN0ZW5jaWE=" || getURL == "U29tb3NfRWxfVmFsbGU=" || getURL == "Q2FuYWxfQ2l1ZGFkX01EUQ==" || getURL == "NV9EaWFzX1BZ" || getURL == "VGVsZWZlX0ludGVybmFjaW9uYWw=" || getURL == "Q0hfMTNfQ29ycmllbnRlcw==" || getURL == "U2hvd19TcG9ydHM=" || getURL == "Q0hfOV9SZXNpc3RlbmNpYQ==" || getURL == "VEVMRUZVVFVST19DNA==" || getURL == "VGVsZWZlX05ldXF1ZW4=" || getURL == "VGVsZWZlX1NhbHRh" || getURL == "U05UX0M0" || getURL == "UEFSQVZJU0lPTl9DNA==" || getURL == "Tk9USUNJQVNfUFlfQzQ=" || getURL == "UEFSQVZJU0lPTl9DNA==" || getURL == "TEFfVEVMRV9DNA==" || getURL == "U1VSX1RWX0M0" || getURL == "Q2FuYWwxMlVSVQ==" || getURL == "RGlzY292ZXJ5SG9tZUhlYWx0aEhE" || getURL == "Q2FuYWw0X1VSVQ==" || getURL == "SEJPSEQ=" || getURL == "SEVJX05PVw==" || getURL == "Q2FuYWwxMF9VUlU=" || getURL == "UlBDX0M0") {
+    } else if (getURL == "Q2FuYWxfNV9Sb3Nhcmlv" || getURL == "VFZfQ2FtYXJh" || getURL == "Q0hfMTJfUG9zYWRhcw==" || getURL == "Q0JBMjQ=" || getURL == "TWl4VFY=" || getURL == "TG9jYWxfQ2FybG9zX1Bheg==" || getURL == "Q2FuYWwxMF9DQkFfSEQ=" || getURL == "VU5JQ0FOQUxfQzQ=" || getURL == "TGF0YW1fUnVyYWw=" || getURL == "U29tb3NfQ29ycmllbnRlcw==" || getURL == "U29tb3NfU2FsdGE=" || getURL == "U29tb3NfUmFmYWVsYQ==" || getURL == "U29tb3NfUmVzaXN0ZW5jaWE=" || getURL == "U29tb3NfRWxfVmFsbGU=" || getURL == "Q2FuYWxfQ2l1ZGFkX01EUQ==" || getURL == "NV9EaWFzX1BZ" || getURL == "VGVsZWZlX0ludGVybmFjaW9uYWw=" || getURL == "Q0hfMTNfQ29ycmllbnRlcw==" || getURL == "U2hvd19TcG9ydHM=" || getURL == "Q0hfOV9SZXNpc3RlbmNpYQ==" || getURL == "VEVMRUZVVFVST19DNA==" || getURL == "VGVsZWZlX05ldXF1ZW4=" || getURL == "VGVsZWZlX1NhbHRh" || getURL == "U05UX0M0" || getURL == "UEFSQVZJU0lPTl9DNA==" || getURL == "Tk9USUNJQVNfUFlfQzQ=" || getURL == "UEFSQVZJU0lPTl9DNA==" || getURL == "TEFfVEVMRV9DNA==" || getURL == "U1VSX1RWX0M0" || getURL == "Q2FuYWwxMlVSVQ==" || getURL == "RGlzY292ZXJ5SG9tZUhlYWx0aEhE" || getURL == "Q2FuYWw0X1VSVQ==" || getURL == "SEJPSEQ=" || getURL == "Q2FuYWxfMTFfRm9ybW9zYQ==" || getURL == "QW1lcmljYV9QWQ==" || getURL == "QTI0X1BZ" || getURL == "SEVJX05PVw==" || getURL == "Q2FuYWwxMF9VUlU=" || getURL == "RVNQTjJfUFk=" || getURL == "RVNQTl9QWQ==" || getURL == "VGVsZWZlX01EUV9IRA==" || getURL == "U29tb3NfUGFyYW5h" || getURL == "NVJUVg==" || getURL == "RXZlbnRvczNfVVk=" || getURL == "RXZlbnRvc18yX1VZ" || getURL == "RVNQTjJfVVk=" || getURL == "Q2FuYWwxMF9SaW9fTmVncm8=" || getURL == "Q2FuYWxfMl9NRFFfTEND" || getURL == "RVNQTl9VWQ==" || getURL == "Q2FuYWxfMTNfUmlvXzR0bw==" || getURL == "RXZlbnRvczJfUFk=" || getURL == "UlBDX0M0") {
         return 4;
     } else {
         return 3;
@@ -35,15 +28,64 @@ function getChannelNumber(getURL) {
 
 function getChannelKeys(getURL) {
     const channelMap = {
-      
+        
         "QmFuZGVpcmFudGVz": { keyId: "0b4f56d5c19b45fb3e75a73b6ec06e6c", key: "c464e2b6ded2b52e1e7753b3a859abce" }, //Bandeirantes
         "QWxsamF6emVyYQ==": { keyId: "137a1a70fa118b695118a3aad9485b13", key: "7c35ca36d4452dfa03d88725a0d16105" }, //Alljazzera
         "QXJpcmFuZw==": { keyId: "436d78a75fad9bdcc6d409640c116a62", key: "c77471ac3b694513a9c5ff68b8d4fac5" }, //Arirang
-       "SEVJX05PVw==": { keyId: "a8922522d07bc6aea96decd1c61553a6", key: "dd9d597ceaf05fa903587ff1a657a04e" }, //HEI_NOW
+        "SEVJX05PVw==": { keyId: "a8922522d07bc6aea96decd1c61553a6", key: "dd9d597ceaf05fa903587ff1a657a04e" }, //HEI_NOW
         "VHZfR2FsaWNpYQ==": { keyId: "23419f2a0a214038a94e24db13ee85a9", key: "4c627ad6b8774e548e28d4aaf82a96a0" }, //Tv_Galicia
         "Q2FibGVfWV9EaWFyaW8=": { keyId: "6df95979c5b379c56f6e87a19e37be00", key: "034564e9816644d6618644246347bc64" }, //Cable_Y_Diario
-        "RXZlbnRvc18z": { keyId: "8b2fdf5a35d01a6ac888b7e8b1a2ddad", key: "2c088b42e71dba1c572e7f04d2934430" }, //Eventos_3
+        "RXZlbnRvc18z": { keyId: "8b2fdf5a35d01a6ac888b7e8b1a2ddad", key: "2c088b42e71dba1c572e7f04d2934430" }, //Eventos_3arg
         "Q2FuYWxfVW5pdmVyc2lkYWQ=": { keyId: "93c40cee58a5f415828cc32d0c80d311", key: "d00906d71ee69515cd4dca1162d5ae7f" }, //Canal_Universidad
+        "U29tb3NfQXp1bA==": { keyId: "4343f3f5f5b4d3dffa9584d20d912ac6", key: "9f0c94b68cf89c38d30dd56a2fbecd48" }, //Somos_Azul
+        "VGVsZUp1bmlu": { keyId: "04a6e06cd400b52502f9dcab713077ad", key: "629fc0a3c99442eb5ff46b6f3133fd44" }, //TeleJunin
+        "Q2FuYWxfMTBfSnVuaW4=": { keyId: "2002528cbe8ebac766a4b87b2c931cb7", key: "e545efab88c32190b395fe2fa96cf0ce" }, //Canal_10_Junin
+        "VGVsZW1lZGlh": { keyId: "294b92debd46867562934091f551e6e5", key: "79ec0fe4b5fa6c66a29c93542a070f19" }, //Telemedia
+        "QTI0X1BZ": { keyId: "82e87fac1c33915ad5d344ffac1bbbb4", key: "db60bfaa0178071a5572e6e6ffb46ed3" }, //A24_PY
+        "QW1lcmljYV9QWQ==": { keyId: "4e4a187474de8e29a8507d496c8a594f", key: "daab5ccf306d67749740f7ce02c07850" }, //America_PY
+        "Q2FuYWxfOTA=": { keyId: "ca50103f3285421e8be7da8c0c0e7a54", key: "3608e92a6feddf228c1f035ebb764426" }, //Canal_90eveflow
+        "Q2FuYWxfMTFfRm9ybW9zYQ==": { keyId: "78cbce875d90e04f3f2b2e26261d5255", key: "d6c6a3c3ec898483608ff39e086cad66" }, //Canal_11_Formosa
+        "": { keyId: "", key: "" }, //
+        "": { keyId: "", key: "" }, //
+        "Q2FuYWw3X1NERQ==": { keyId: "eec52ca8f4d229ae6aae86b6835256ed", key: "506afbd8be37e388f5d3ceb7992069d4" }, //Canal7_SDE
+        "Q2FuYWwxMF9SaW9fTmVncm8=": { keyId: "491adb9269c5c8ab41f83936d0b4a68f", key: "7ab85b000d8b5a06f542aff956bcb007" }, //Canal10_Rio_Negro
+        "NVJUVg==": { keyId: "7caca846fda0ac308553f7eb7284a596", key: "256934a336abbc242378af4a2dfcac4e" }, //5RTV
+        "": { keyId: "", key: "" }, //
+        "": { keyId: "", key: "" }, //
+        "": { keyId: "", key: "" }, //
+        "U29tb3NfVHVjdW1hbg==": { keyId: "a2004558039ee95097010029015316b4", key: "29960fc94fbf7a13c9de1308d508bc25" }, //Somos_Tucuman
+        "U29tb3NfUGFyYW5h": { keyId: "726c0ccee1985d0d59738bfe8e9aee2b", key: "0ff2c5a2381d8f0b7b92565dceb4ca58" }, //Somos_Parana
+        "U29tb3NfQmVsbF9WaWxsZQ==": { keyId: "4dd0d6fab23ee397e603bf1cad49cc3f", key: "84163f0d536884a640a509a9a0c937ee" }, //Somos_Bell_Ville
+        "Q2FuYWxfMTBfTURR": { keyId: "5f353c7f02f643da9049646fb835abcf", key: "ae8630fc13b9e4554c56bd0be31be74f" }, //Canal_10_MDQ
+        "VGVsZWZlX01EUV9IRA==": { keyId: "cd82180cb606cee7547f58298c4f8fcb", key: "844489c5f007fbe4afa36c8d64528d73" }, //Telefe_MDQ_HD
+          "": { keyId: "", key: "" }, //
+        "Q2FuYWxfNzlfTURR": { keyId: "32b5308f8e6d411eab8a8f1576f95e27", key: "0afb56f72dbf8a5555e30a6f086049ac" }, //Canal_79_MDQ
+        "Q2FuYWxfMl9NRFFfTEND": { keyId: "30691d3980864458cc24a230708cf003", key: "9f11ac9715b016312f6a222d0886c2af" }, //Canal_2_MDQ_LCC
+        "RWNvVHZfVGFuZGls": { keyId: "2bcb0593847aa273102a0546f8d51ce4", key: "f04591c07966e6678462dd94f99da66a" }, //EcoTv_Tandil
+        "VW5pdmVyc2lkYWRfTURR": { keyId: "4f6ab7206de81b4f19edcbc735a7f4ca", key: "5d05b9738b9a999a4b7c5b495866c21c" }, //Universidad_MDQ
+        "": { keyId: "", key: "" }, //
+        "": { keyId: "", key: "" }, //
+        "": { keyId: "", key: "" }, //
+        "": { keyId: "", key: "" }, //
+        "RVNQTjJfUFk=": { keyId: "0aab4bd18144c7316c35c74ccce96ddc", key: "3e6db98d9df4747108bd896cba0be57d" }, //ESPN2_PY1
+        "RVNQTl9QWQ==": { keyId: "4cbc5f5cbac72d38371bb63309e4a9d2", key: "dbc8de27da9726cd2e7659abb08e86ef" }, //ESPN_PY2
+        "RVNQTjNfVXktUHk=": { keyId: "ed53871dc50dcdc59a6271db3c8c51b3", key: "0c21dc8629e3f2e6fe9efa8b80dc447e" }, //ESPN3_Uy-Py3
+        "": { keyId: "", key: "" }, //
+        "RVNQTl9VWQ==": { keyId: "6362e1f36fcb7ee3c47debd9140336ad", key: "9ba1d46c5b9c7a3130a5dabbf7155175" }, //ESPN_UY
+        "RVNQTjJfVVk=": { keyId: "0d820100144772fed9f38b83650fa7e1", key: "ded8cc47b29b0eb0b0a87df22e721847" }, //ESPN2_UY
+        "": { keyId: "", key: "" }, //
+        "RXZlbnRvc18yX1VZ": { keyId: "87bfded2bdfbd3ad9dce4d30b2739fd1", key: "e80b0d66d60fa0a2d24d8b36055a6fef" }, //Eventos_2_UY
+        "RXZlbnRvczNfVVk=": { keyId: "f774b06a300783596f27b552226de9c0", key: "4d6256b28b487bcf906bcf0328635747" }, //Eventos3_UY
+        "": { keyId: "", key: "" }, //
+        "": { keyId: "", key: "" }, //
+        "RXZlbnRvc19QWQ==": { keyId: "2bdfc30f2a7591e107d8c84458c395dd", key: "dcee0d6420b6b597fba15d3c4411a71e" }, //Eventos_PY
+        "RXZlbnRvczJfUFk=": { keyId: "0900ce66b82de0fd07aa8f12a48f29a2", key: "e5556dba688fda637374ab5c87d7cda6" }, //Eventos2_PY
+        "Q2FuYWxfMTNfUmlvXzR0bw==": { keyId: "6f4439b8c624ac6a8abba87c3621d580", key: "c8798da6ee3e0934089ab2ab9fe5d5b7" }, //Canal_13_Rio_4to
+        "VW5pb25UVg==": { keyId: "bc47bd761413375f1b6e7333a51de41a", key: "ccf01c0661ae65f273b79eeda0ec0f3e" }, //uniontvpy
+        "U29tb3NfU2FuX1BlZHJv": { keyId: "5ed7bfb5a7be4d99df70ed73852098d4", key: "df5123a8a8160b62b51c7cb6001be23c" }, //Somos_San_Pedro
+        "U29tb3NfTm9ydGU=": { keyId: "ee8a6cc35fdb4ab7adeed9d16593459f", key: "5ca774838d5c887f7a8d7dee64b9a6b0" }, //Somos_Norte
+        "VmVudXNfTWVkaWE=": { keyId: "835af7d77bd13621ba044ab931e5e89f", key: "753ed98985b348ab7bf3c0a2b24930eb" }, //Venus_Media
+        "QU1DX1Nlcmllcw==": { keyId: "10d3d4f33a6bad277accc2688c46b406", key: "588fd56bcab1fcdb4f33b5c2f7018d29" }, //AMC_Series
       
         "Q2FuYWxfUFJP": { keyId: "8df0f1a1e05e9c6a438e23a87c9d06ea", key: "5df74d374a2a8a871463e7c438fa3ba7" }, //Canal_PRO
         "Qmxvb21iZXJn": { keyId: "1e50891cdc64452aae20d049727f2f3f", key: "551871ba1dc6a95597ec0cb82eb3b2a4" }, //Bloomberg
@@ -249,12 +291,12 @@ function getChannelKeys(getURL) {
         "Q2FuYWxfOF9DQkE": { keyId: "103ce214b4d04c8eb4dd43670e956dad", key: "20e030576b8dc4df0d1c68e16af3bc0f" }, //Canal_8_Cordoba-TELEFE
         "Q2FuYWxfOF9UdWN1bWFu": { keyId: "7760caa058b51b7cce151c0539fa4a8f", key: "edd086c1011ed2c54cbe869d0e8d9289" }, //Canal_8_Tucuman-TELEFE
         "Q2FuYWxfNV9Sb3Nhcmlv": { keyId: "c61b5ac8e1664bf5b544e92ea2597e1c", key: "938437ac25f0a18e04efc1a083489edc" }, //Canal_5_Rosario-TELEFE
-        "VGVsZWZlX1NhbHRh": { keyId: "6c7a5de392f874308e4dd8f2837f1115", key: "9ccf9ec6922c403d67d0df7952547581" }, //Telefe_Salta
+        "eeepe1py": { keyId: "0aab4bd18144c7316c35c74ccce96ddc", key: "3e6db98d9df4747108bd896cba0be57d" }, //ESPN PY 1
         "VGVsZWZlX05ldXF1ZW4=": { keyId: "55828b728b8affe6d1d57d050025645d", key: "8ac11ed6d0ccaeac3f8218419f65bb94" }, //Telefe_Neuquen
         "VEVMRUZVVFVST19DNA==": { keyId: "5d2731cf8a59b73438ef59d88cd882bf", key: "3f412fa6368b7db4903588de695377e1" }, //TELEFUTURO_C4
         "VGVsZW1heA": { keyId: "e7ec364ad6854fedad797538cb58780d", key: "57dfb3fca2ca35b37ff81c35595e9be8" }, //Telemax
         "VG9kb05vdGljaWFz": { keyId: "7ceb1cd0622cd7e88fcdc99fe3a55de6", key: "951637093d41c7388a1ef3f620cfea21" }, //TodoNoticias-TN
-        "VE5UX0hEX0FyZw==": { keyId: "faad1722a575f4d9ec7b774db63c879c", key: "cf0184830344ba36ad2ffef9dd2dd9d0" }, //TNT_HD_Arg
+        "VE5UX0hEX0FyZw": { keyId: "faad1722a575f4d9ec7b774db63c879c", key: "cf0184830344ba36ad2ffef9dd2dd9d0" }, //TNT_HD_Arg
         "VEJT": { keyId: "49a0179b034ae899cb67d8a5834181aa", key: "486e2c6d69adea7e17f2960e8e366612" }, // TNT Novelas (TBS)
         "VE5UU2VyaWVz": { keyId: "5c14d6aeb19bf113edf91a7b544253cb", key: "8d776d6f9c5c840ebe88d767dd731692" }, // TNT Series
         "VHZfQ2hpbGU=": { keyId: "c5d0d76e24844235988f9265619e5fec", key: "446b71a6deb806c6f129e25de999d07c" }, //Tv_Chile
@@ -273,6 +315,7 @@ function getChannelKeys(getURL) {
         "SW52ZXN0aWdhY2lvbl9QZXJpb2Rpc3RpY2E=": { keyId: "5299f96f873aa0f0e47edc4e15784717", key: "9d53176b0969492f2d93f1867be1dce1" }, // IP Noticias
         "UlBDX0M0": { keyId: "a8093cdcb2d504bd38f16764bd21b6e5", key: "bfcf3b033b5f0b5ae020751a6746326f" }, // el trece py
         "QWR1bHRfU3dpbQ==": { keyId: "9be1432e1e594c8d0648a44d3d9f0c46", key: "8e6c785b14d973c504074b1920f11b15" }, // AS
+      
         "Q2FuYWxfZGVfbGFfY2l1ZGFk": { keyId: "5ee7842b3cf24d1dba088365fa5d0543", key: "69cec006409823c06fbf2866a231b4f7" } // El Canal de la Ciudad
     };
 
@@ -297,21 +340,25 @@ function getParameterByName(name) {
 
 // var getURL = getParameterByName('get');
 // channelList = getChannelKeys(getURL);
+
+
+
+
 async function getURLwithToken() {
-  let token = sessionStorage.getItem('token')
-  if (!token) {
-    const url = 'https://chromecast.cvattv.com.ar/live/c7eds/La_Nacion/SA_Live_dash_enc_wl/La_Nacion.m3u8';
-    let response = await fetch(url, { signal: AbortSignal.timeout(5000) });
-    if (response.redirected) {
-      const regex = /(https:\/\/.+?)(?=\/live)/;
-      const match = response.url.match(regex);
-      if (match) {
-        token = match[0]
-        sessionStorage.setItem('token', match[0])
-      }
+    let token = sessionStorage.getItem('token')
+    if (!token) {
+        const url = 'https://chromecast.cvattv.com.ar/live/c7eds/La_Nacion/SA_Live_dash_enc_C/La_Nacion.m3u8';
+        let response = await fetch(url, { signal: AbortSignal.timeout(5000) });
+        if (response.redirected) {
+            const regex = /(https:\/\/.+?)(?=\/live)/;
+            const match = response.url.match(regex);
+            if (match) {
+                token = match[0]
+                sessionStorage.setItem('token', match[0])
+            }
+        }
     }
-  }
-  return token
+    return token
 }
 
 
@@ -418,8 +465,8 @@ async function getValidMpd(channelInfo) {
 
 
     }
-  mt2 = [...mt]
-  const errorMsg = document.querySelector('.homeScreen #appError'); errorMsg && (errorMsg.style.display = 'block');
-  const animLoader = document.querySelector('.homeScreen .loader'); animLoader && (animLoader.style.display = 'none');
-  throw new Error("No valid MPD URL found. Reloading list...");
+    mt2 = [...mt]
+    const errorMsg = document.querySelector('.homeScreen #appError'); errorMsg && (errorMsg.style.display = 'block');
+    const animLoader = document.querySelector('.homeScreen .loader'); animLoader && (animLoader.style.display = 'none');
+    throw new Error("No valid MPD URL found. Reloading list...");
 }
