@@ -1,4 +1,4 @@
-  let channelList = [
+let channelList = [
     {
         name: '',
         getURL: '',
@@ -19,7 +19,7 @@ function getChannelNumber(getURL) {
         return 5;
     } else if (getURL == "RGlzY292ZXJ5SG9tZUhlYWx0aEhE" || getURL == "Q2FuYWw3X1NERQ==" || getURL == "Qmxvb21iZXJn" || getURL == "Q2FuYWxfVQ==" || getURL == "RnJhbmNlMjRfRmxvdw==" || getURL == "VFZfTmFjaW9uYWxfVXk=" || getURL == "UmVkZV9SZWNvcmQ=" || getURL == "U29tb3NfQmFoaWFfQmxhbmNh" || getURL == "Q2FuYWxfM19Sb3Nhcmlv" || getURL == "Q2FuYWw3X0JhaGlhX0JsYW5jYQ==" || getURL == "Q2FuYWxfMTNfU0ZF" || getURL == "Q2FuYWw5X0JhaGlhX0JsYW5jYQ==" || getURL == "TmF0R2VvSEQ=" || getURL == "VE5UX0hEX0FyZw==" || getURL == "VE5UU2VyaWVz" || getURL == "Q2FydG9vbk5ldHdvcms=" || getURL == "Q2FuYWxfNzlfTURR" || getURL == "RXZlbnRvc19QWQ==" || getURL == "Tmlja2Vsb2Rlb24=" || getURL == "QWR1bHRfU3dpbQ==" || getURL == "RlhIRA==" || getURL == "RXZlbnRvczFIRA") {
         return 3;
-    } else if (getURL == "Q2FuYWxfNV9Sb3Nhcmlv" || getURL == "VFZfQ2FtYXJh" || getURL == "Q0hfMTJfUG9zYWRhcw==" || getURL == "Q0JBMjQ=" || getURL == "TWl4VFY=" || getURL == "TG9jYWxfQ2FybG9zX1Bheg==" || getURL == "Q2FuYWwxMF9DQkFfSEQ=" || getURL == "VU5JQ0FOQUxfQzQ=" || getURL == "TGF0YW1fUnVyYWw=" || getURL == "U29tb3NfQ29ycmllbnRlcw==" || getURL == "U29tb3NfU2FsdGE=" || getURL == "U29tb3NfUmFmYWVsYQ==" || getURL == "U29tb3NfUmVzaXN0ZW5jaWE=" || getURL == "U29tb3NfRWxfVmFsbGU=" || getURL == "Q2FuYWxfQ2l1ZGFkX01EUQ==" || getURL == "NV9EaWFzX1BZ" || getURL == "VGVsZWZlX0ludGVybmFjaW9uYWw=" || getURL == "Q0hfMTNfQ29ycmllbnRlcw==" || getURL == "U2hvd19TcG9ydHM=" || getURL == "Q0hfOV9SZXNpc3RlbmNpYQ==" || getURL == "VEVMRUZVVFVST19DNA==" || getURL == "VGVsZWZlX05ldXF1ZW4=" || getURL == "VGVsZWZlX1NhbHRh" || getURL == "U05UX0M0" || getURL == "UEFSQVZJU0lPTl9DNA==" || getURL == "Tk9USUNJQVNfUFlfQzQ=" || getURL == "UEFSQVZJU0lPTl9DNA==" || getURL == "TEFfVEVMRV9DNA==" || getURL == "U1VSX1RWX0M0" || getURL == "Q2FuYWwxMlVSVQ==" || getURL == "RGlzY292ZXJ5SG9tZUhlYWx0aEhE" || getURL == "Q2FuYWw0X1VSVQ==" || getURL == "SEJPSEQ=" || getURL == "Q2FuYWxfMTFfRm9ybW9zYQ==" || getURL == "QW1lcmljYV9QWQ==" || getURL == "QTI0X1BZ" || getURL == "SEVJX05PVw==" || getURL == "Q2FuYWwxMF9VUlU=" || getURL == "RVNQTjJfUFk=" || getURL == "RVNQTl9QWQ==" || getURL == "VGVsZWZlX01EUV9IRA==" || getURL == "U29tb3NfUGFyYW5h" || getURL == "NVJUVg==" || getURL == "RXZlbnRvczNfVVk=" || getURL == "RXZlbnRvc18yX1VZ" || getURL == "RVNQTjJfVVk=" || getURL == "Q2FuYWwxMF9SaW9fTmVncm8=" || getURL == "Q2FuYWxfMl9NRFFfTEND" || getURL == "RVNQTl9VWQ==" || getURL == "Q2FuYWxfMTNfUmlvXzR0bw==" || getURL == "RXZlbnRvczJfUFk=" || getURL == "UlBDX0M0") {
+    } else if (getURL == "Q2FuYWxfNV9Sb3Nhcmlv" || getURL == "VFZfQ2FtYXJh" || getURL == "Q0hfMTJfUG9zYWRhcw==" || getURL == "Q0JBMjQ=" || getURL == "TWl4VFY=" || getURL == "TG9jYWxfQ2FybG9zX1Bheg==" || getURL == "Q2FuYWwxMF9DQkFfSEQ=" || getURL == "VU5JQ0FOQUxfQzQ=" || getURL == "TGF0YW1fUnVyYWw=" || getURL == "U29tb3NfQ29ycmllbnRlcw==" || getURL == "U29tb3NfU2FsdGE=" || getURL == "U29tb3NfUmFmYWVsYQ==" || getURL == "U29tb3NfUmVzaXN0ZW5jaWE=" || getURL == "U29tb3NfRWxfVmFsbGU=" || getURL == "Q2FuYWxfQ2l1ZGFkX01EUQ==" || getURL == "NV9EaWFzX1BZ" || getURL == "VGVsZWZlX0ludGVybmFjaW9uYWw=" || getURL == "Q0hfMTNfQ29ycmllbnRlcw==" || getURL == "U2hvd19TcG9ydHM=" || getURL == "Q0hfOV9SZXNpc3RlbmNpYQ==" || getURL == "VEVMRUZVVFVST19DNA==" || getURL == "VGVsZWZlX05ldXF1ZW4=" || getURL == "VGVsZWZlX1NhbHRh" || getURL == "U05UX0M0" || getURL == "UEFSQVZJU0lPTl9DNA==" || getURL == "Tk9USUNJQVNfUFlfQzQ=" || getURL == "UEFSQVZJU0lPTl9DNA==" || getURL == "TEFfVEVMRV9DNA==" || getURL == "U1VSX1RWX0M0" || getURL == "Q2FuYWwxMlVSVQ==" || getURL == "RGlzY292ZXJ5SG9tZUhlYWx0aEhE" || getURL == "Q2FuYWw0X1VSVQ==" || getURL == "SEJPSEQ=" || getURL == "Q2FuYWxfMTFfRm9ybW9zYQ==" || getURL == "QW1lcmljYV9QWQ==" || getURL == "QTI0X1BZ" || getURL == "SEVJX05PVw==" || getURL == "Q2FuYWwxMF9VUlU=" || getURL == "RVNQTjJfUFk=" || getURL == "RVNQTl9QWQ==" || getURL == "VGVsZWZlX01EUV9IRA==" || getURL == "U29tb3NfUGFyYW5h" || getURL == "NVJUVg==" || getURL == "RXZlbnRvczNfVVk=" || getURL == "RXZlbnRvc18yX1VZ" || getURL == "RVNQTjJfVVk=" || getURL == "Q2FuYWwxMF9SaW9fTmVncm8=" || getURL == "UkND" || getURL == "Q2FuYWxfMl9NRFFfTEND" || getURL == "RVNQTl9VWQ==" || getURL == "Q2FuYWxfMTNfUmlvXzR0bw==" || getURL == "TmFuZHV0aV9QeQ==" || getURL == "RWR1Y2FuYWw=" || getURL == "RXZlbnRvczJfUFk=" || getURL == "UlBDX0M0") {
         return 4;
     } else {
         return 3;
@@ -51,6 +51,11 @@ function getChannelKeys(getURL) {
         "Q2FuYWwxMF9SaW9fTmVncm8=": { keyId: "491adb9269c5c8ab41f83936d0b4a68f", key: "7ab85b000d8b5a06f542aff956bcb007" }, //Canal10_Rio_Negro
         "NVJUVg==": { keyId: "7caca846fda0ac308553f7eb7284a596", key: "256934a336abbc242378af4a2dfcac4e" }, //5RTV
         "": { keyId: "", key: "" }, //
+        "UkND": { keyId: "d8479ae2a7cc939e8382c8851927425d", key: "d1f89fc694800645ae926d9c5f13a1f6" }, //RCC
+        "RWR1Y2FuYWw=": { keyId: "4a51992671bd007fbf5d5c257ee62ea0", key: "69c4603a7136ec9eb515f8e0ca9c275c" }, //Educanal
+        "TmFuZHV0aV9QeQ==": { keyId: "46c3d8c42bb9799e5de5792e3fb45de4", key: "aed06fd292d278aa464da44752b9c313" }, //Nanduti_Py
+        "": { keyId: "", key: "" }, //
+        "": { keyId: "", key: "" }, //
         "": { keyId: "", key: "" }, //
         "": { keyId: "", key: "" }, //
         "U29tb3NfVHVjdW1hbg==": { keyId: "a2004558039ee95097010029015316b4", key: "29960fc94fbf7a13c9de1308d508bc25" }, //Somos_Tucuman
@@ -58,7 +63,7 @@ function getChannelKeys(getURL) {
         "U29tb3NfQmVsbF9WaWxsZQ==": { keyId: "4dd0d6fab23ee397e603bf1cad49cc3f", key: "84163f0d536884a640a509a9a0c937ee" }, //Somos_Bell_Ville
         "Q2FuYWxfMTBfTURR": { keyId: "5f353c7f02f643da9049646fb835abcf", key: "ae8630fc13b9e4554c56bd0be31be74f" }, //Canal_10_MDQ
         "VGVsZWZlX01EUV9IRA==": { keyId: "cd82180cb606cee7547f58298c4f8fcb", key: "844489c5f007fbe4afa36c8d64528d73" }, //Telefe_MDQ_HD
-          "": { keyId: "", key: "" }, //
+        "": { keyId: "", key: "" }, //
         "Q2FuYWxfNzlfTURR": { keyId: "32b5308f8e6d411eab8a8f1576f95e27", key: "0afb56f72dbf8a5555e30a6f086049ac" }, //Canal_79_MDQ
         "Q2FuYWxfMl9NRFFfTEND": { keyId: "30691d3980864458cc24a230708cf003", key: "9f11ac9715b016312f6a222d0886c2af" }, //Canal_2_MDQ_LCC
         "RWNvVHZfVGFuZGls": { keyId: "2bcb0593847aa273102a0546f8d51ce4", key: "f04591c07966e6678462dd94f99da66a" }, //EcoTv_Tandil
@@ -316,7 +321,7 @@ function getChannelKeys(getURL) {
         "UlBDX0M0": { keyId: "a8093cdcb2d504bd38f16764bd21b6e5", key: "bfcf3b033b5f0b5ae020751a6746326f" }, // el trece py
         "QWR1bHRfU3dpbQ==": { keyId: "9be1432e1e594c8d0648a44d3d9f0c46", key: "8e6c785b14d973c504074b1920f11b15" }, // AS
       
-        "Q2FuYWxfZGVfbGFfY2l1ZGFk": { keyId: "5ee7842b3cf24d1dba088365fa5d0543", key: "69cec006409823c06fbf2866a231b4f7" } // El Canal de la Ciudad
+        "Q2FuYWxfZGVfbGFfY2l1ZGFk": { keyId: "5ee7842b3cf24d1dba088365fa5d0543", key: "69cec006409823c06fbf2866a231b4f7" }, // El Canal de la Ciudad
     };
 
     channelList[0].name = atob(getURL);
@@ -340,25 +345,21 @@ function getParameterByName(name) {
 
 // var getURL = getParameterByName('get');
 // channelList = getChannelKeys(getURL);
-
-
-
-
 async function getURLwithToken() {
-    let token = sessionStorage.getItem('token')
-    if (!token) {
-        const url = 'https://chromecast.cvattv.com.ar/live/c7eds/La_Nacion/SA_Live_dash_enc_C/La_Nacion.m3u8';
-        let response = await fetch(url, { signal: AbortSignal.timeout(5000) });
-        if (response.redirected) {
-            const regex = /(https:\/\/.+?)(?=\/live)/;
-            const match = response.url.match(regex);
-            if (match) {
-                token = match[0]
-                sessionStorage.setItem('token', match[0])
-            }
-        }
+  let token = sessionStorage.getItem('token')
+  if (!token) {
+    const url = 'https://chromecast.cvattv.com.ar/live/c7eds/La_Nacion/SA_Live_dash_enc_wl/La_Nacion.m3u8';
+    let response = await fetch(url, { signal: AbortSignal.timeout(5000) });
+    if (response.redirected) {
+      const regex = /(https:\/\/.+?)(?=\/live)/;
+      const match = response.url.match(regex);
+      if (match) {
+        token = match[0]
+        sessionStorage.setItem('token', match[0])
+      }
     }
-    return token
+  }
+  return token
 }
 
 
@@ -465,8 +466,8 @@ async function getValidMpd(channelInfo) {
 
 
     }
-    mt2 = [...mt]
-    const errorMsg = document.querySelector('.homeScreen #appError'); errorMsg && (errorMsg.style.display = 'block');
-    const animLoader = document.querySelector('.homeScreen .loader'); animLoader && (animLoader.style.display = 'none');
-    throw new Error("No valid MPD URL found. Reloading list...");
+  mt2 = [...mt]
+  const errorMsg = document.querySelector('.homeScreen #appError'); errorMsg && (errorMsg.style.display = 'block');
+  const animLoader = document.querySelector('.homeScreen .loader'); animLoader && (animLoader.style.display = 'none');
+  throw new Error("No valid MPD URL found. Reloading list...");
 }
