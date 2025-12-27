@@ -12,15 +12,15 @@ let channelList = [
 
 const CHANNELS = new Map([
     // C7
-    ...["VGVsZW1lZGlh", "Q2FuYWxfMTBfSnVuaW4=", "VGVsZUp1bmlu", "U29tb3NfQXp1bA==", "RVNQTjNfVXktUHk=", "RXZlbnRvc18z", "QTNfQ2luZQ==", "QXJpcmFuZw==", "QmFuZGVpcmFudGVz", "QWxsamF6emVyYQ==", "Q2FuYWxfUFJP", "VW5pdmVyc28=", "Q2FuYWxfMTFfUGFyYW5h", "Q0FOQUxfTFVa", "QWxsZWdyb0hE", "QmFieVRW", "RE5ld3M=", "VVNBX05ldHdvcms=", "QTNfU2VyaWVz", "TWVnYV9UVg==", "QW1lcmljYV9UdWN1bWFu", "UFhfU3BvcnRz", "Q2gxMF9UdWN1bWFu", "SG9tZV9hbmRfR2FyZGVu", "REhF", "Rmxvd19NdXNpY19YUA==", "QUVIRA==", "SG9sYV9UVg==", "QVhOSEQ=", "TVRWMDA=", "V2FybmVySEQ=", "R0VOX1RW", "Rm94X1Nwb3J0c19QcmVtaXVuX0hE", "VG9kb05vdGljaWFz", "VHlDU3BvcnQ", "QW1lcmljYTI0", "QzVO", "TGFfTmFjaW9u", "Q3JvbmljYVRW", "Q2FuYWxfOF9UdWN1bWFu", "UGFyYWd1YXlfVFY=", "UGFyYW1vdW50", "Q29tZWR5Q2VudHJhbA", "Rmxvd19NdXNpY18x", "Rmxvd19NdXNpY18y", "Rmxvd19NdXNpY18z", "Qm9vbWVyYW5n", "RHJlYW13b3Jrcw==", "QW5pbWFsUGxhbmV0", "SGlzdG9yeUhE", "SUQ=", "QnJhdm9UVg==", "U29ueUhE", "U29ueV9Nb3ZpZXM=", "VHJ1VFY=", "SEJPX1BPUA==", "RGlzY292ZXJ5VHVyYm8=", "RGlzbmV5SnI=", "SW52ZXN0aWdhY2lvbl9QZXJpb2Rpc3RpY2E=", "Rm94U3BvcnRzMl9VWQ==", "RVNQTjQ=", "Rm94U3BvcnRzM19VWQ==", "RXZlbnRvc19IRF9VeQ==", "VW5pb25UVg==", "VmVudXNfTWVkaWE=", "U29tb3NfU2FuX1BlZHJv", "VGVsZW11bmRvX0hE", "UGFzaW9uZXM="].map(k => [k, 7]),
+    ...["VW5pdmVyc2lkYWRfTURR", "RWNvVHZfVGFuZGls", "U29tb3NfQmVsbF9WaWxsZQ==", "U29tb3NfVHVjdW1hbg==", "VW5pb25UVg==", "VmVudXNfTWVkaWE=", "U29tb3NfU2FuX1BlZHJv", "VGVsZW1lZGlh", "Q2FuYWxfMTBfSnVuaW4=", "VGVsZUp1bmlu", "U29tb3NfQXp1bA==", "RVNQTjNfVXktUHk=", "RXZlbnRvc18z", "QTNfQ2luZQ==", "QXJpcmFuZw==", "QmFuZGVpcmFudGVz", "QWxsamF6emVyYQ==", "Q2FuYWxfUFJP", "VW5pdmVyc28=", "Q2FuYWxfMTFfUGFyYW5h", "Q0FOQUxfTFVa", "QWxsZWdyb0hE", "QmFieVRW", "RE5ld3M=", "VVNBX05ldHdvcms=", "QTNfU2VyaWVz", "TWVnYV9UVg==", "QW1lcmljYV9UdWN1bWFu", "UFhfU3BvcnRz", "Q2gxMF9UdWN1bWFu", "SG9tZV9hbmRfR2FyZGVu", "REhF", "Rmxvd19NdXNpY19YUA==", "QUVIRA==", "SG9sYV9UVg==", "QVhOSEQ=", "TVRWMDA=", "V2FybmVySEQ=", "R0VOX1RW", "Rm94X1Nwb3J0c19QcmVtaXVuX0hE", "VG9kb05vdGljaWFz", "VHlDU3BvcnQ", "QW1lcmljYTI0", "QzVO", "TGFfTmFjaW9u", "Q3JvbmljYVRW", "Q2FuYWxfOF9UdWN1bWFu", "UGFyYWd1YXlfVFY=", "UGFyYW1vdW50", "Q29tZWR5Q2VudHJhbA", "Rmxvd19NdXNpY18x", "Rmxvd19NdXNpY18y", "Rmxvd19NdXNpY18z", "Qm9vbWVyYW5n", "RHJlYW13b3Jrcw==", "QW5pbWFsUGxhbmV0", "SGlzdG9yeUhE", "SUQ=", "QnJhdm9UVg==", "U29ueUhE", "U29ueV9Nb3ZpZXM=", "VHJ1VFY=", "SEJPX1BPUA==", "RGlzY292ZXJ5VHVyYm8=", "RGlzbmV5SnI=", "SW52ZXN0aWdhY2lvbl9QZXJpb2Rpc3RpY2E=", "Rm94U3BvcnRzMl9VWQ==", "RVNQTjQ=", "Rm94U3BvcnRzM19VWQ==", "RXZlbnRvc19IRF9VeQ==", "VGVsZW11bmRvX0hE", "UGFzaW9uZXM="].map(k => [k, 7]),
     // C6
-    ...["QU1DX1Nlcmllcw==", "Q2FibGVfWV9EaWFyaW8=", "VFZfRXNwYW5h", "VHZfR2FsaWNpYQ==", "RVNQTjJfQXJn", "Q2FuYWxfMjE=", "VGVsZW5vdmVsYXM=", "RVdUTg==", "S1pP", "Vm9ydGVyaXg=", "RFc=", "Q05OX0ludGVybmFjaW9uYWw=", "S2lkb28=", "VG9vbmNhc3Q=", "UGxpbV9QbGlt", "RnJhbmNlXzI0", "Tmlja211c2lj", "U29tb3NfTm9ydGU=", "U29tb3NfTGFfUGxhdGE=", "QXJ0ZWFyX0ludGVybmFjaW9uYWw=", "RXZlbnRvc18yX0hE", "R29sZGVu", "Q2FuYWxfOV9QYXJhbmE=", "R29sZl9DaGFubmVs", "Q2FuYWxfYQ==", "QW1lcmljYV9TcG9ydHM=", "Q2luZW1heA==", "Q2FuYWxfOF9DQkE=", "MjZfVFZfSEQ", "RGlwdXRhZG9zX1RW", "QXJnZW50aW5pc2ltYQ", "TWV0cm8", "QkJDX1dvcmxkX05ld3M", "VGhlYXRlcl9IRA==", "R2xpdHo=", "UXVpZXJvX0hE", "RGlzY292ZXJ5X1dvcmxkX0hE", "RXVyb2NoYW5uZWw=", "RGlzY292ZXJ5X1NjaWVuY2U=", "SU5DQUFfVHY=", "VFY1X01vbmRl", "TVRWX0hpdHM=", "TVRWX0hE", "Tmlja19Kcg==", "VFZFX0VzcGFuYQ==", "V09CSQ==", "Vm9sdmVy", "VGVsZXN1cg==", "TGlmZXRpbWU=", "QW50ZW5hXzM=", "Rm94X05ld3M=", "VHZfQ2hpbGU=", "TWFzX0NoaWM=", "U3R1ZGlvX1VuaXZlcnNhbA==", "SVNBVA==", "U3VuX0NoYW5uZWw=", "UkFJ", "VmVudXM=", "U2V4dHJlbWU", "UGxheWJveQ", "VE5UX1Nwb3J0c19IRA==", "VGVsZWZlSEQ=", "Q2FuYWw3", "RW5jdWVudHJv", "VGVsZW1heA", "TmV0X1RW", "Q2FuYWxfMTJfQ0JB", "RWxfR2FyYWdl", "RmlsbV9BcnRz", "VW5pdmVyc2FsX0NoYW5uZWxfSEQ=", "RXVyb3BhX0V1cm9wYQ", "RXVyb25ld3M=", "Rm9vZF9OZXR3b3Jr", "RV9FbnRlcnRhaW5tZW50X1RlbGV2aXNpb24=", "Q00=", "UEFLQV9QQUtB", "SGlzdG9yeV8y", "U3lGeQ==", "VEJT", "VENN", "SEJPXzI=", "SEJPX1BsdXM=", "SEJPX0ZhbWlseQ==", "SEJPX0V4dHJlbWU=", "SEJPX011bmRp", "SEJPX1NpZ25hdHVyZQ==", "Q2FuYWxfUnVyYWw=", "VExD", "Q2FuYWxfOTA=", "Q2FuYWxfZGVfbGFfY2l1ZGFk", "RGlzY292ZXJ5X0tpZHM=", "SFRW", "TkJBX1RW", "VW5pdmVyc2FsX0NpbmVtYQ==", "VW5pdmVyc2FsX0NvbWVkeQ==", "dW5pdmVyc2FsX0NyaW1l", "VW5pdmVyc2FsX1ByZW1pZXJl", "VW5pdmVyc2FsX1JlYWxpdHk=", "Q05OX2VuX0VzcGFub2w=", "Q2FuYWxfZGVfbGFzX2VzdHJlbGxhcw=="].map(k => [k, 6]),
+    ...["Q2FuYWxfMTBfTURR", "Q2FuYWxfOTA=", "U29tb3NfTm9ydGU=", "QU1DX1Nlcmllcw==", "Q2FibGVfWV9EaWFyaW8=", "VFZfRXNwYW5h", "VHZfR2FsaWNpYQ==", "RVNQTjJfQXJn", "Q2FuYWxfMjE=", "VGVsZW5vdmVsYXM=", "RVdUTg==", "S1pP", "Vm9ydGVyaXg=", "RFc=", "Q05OX0ludGVybmFjaW9uYWw=", "S2lkb28=", "VG9vbmNhc3Q=", "UGxpbV9QbGlt", "RnJhbmNlXzI0", "Tmlja211c2lj", "U29tb3NfTGFfUGxhdGE=", "QXJ0ZWFyX0ludGVybmFjaW9uYWw=", "RXZlbnRvc18yX0hE", "R29sZGVu", "Q2FuYWxfOV9QYXJhbmE=", "R29sZl9DaGFubmVs", "Q2FuYWxfYQ==", "QW1lcmljYV9TcG9ydHM=", "Q2luZW1heA==", "Q2FuYWxfOF9DQkE=", "MjZfVFZfSEQ", "RGlwdXRhZG9zX1RW", "QXJnZW50aW5pc2ltYQ", "TWV0cm8", "QkJDX1dvcmxkX05ld3M", "VGhlYXRlcl9IRA==", "R2xpdHo=", "UXVpZXJvX0hE", "RGlzY292ZXJ5X1dvcmxkX0hE", "RXVyb2NoYW5uZWw=", "RGlzY292ZXJ5X1NjaWVuY2U=", "SU5DQUFfVHY=", "VFY1X01vbmRl", "TVRWX0hpdHM=", "TVRWX0hE", "Tmlja19Kcg==", "VFZFX0VzcGFuYQ==", "V09CSQ==", "Vm9sdmVy", "VGVsZXN1cg==", "TGlmZXRpbWU=", "QW50ZW5hXzM=", "Rm94X05ld3M=", "VHZfQ2hpbGU=", "TWFzX0NoaWM=", "U3R1ZGlvX1VuaXZlcnNhbA==", "SVNBVA==", "U3VuX0NoYW5uZWw=", "UkFJ", "VmVudXM=", "U2V4dHJlbWU", "UGxheWJveQ", "VE5UX1Nwb3J0c19IRA==", "VGVsZWZlSEQ=", "Q2FuYWw3", "RW5jdWVudHJv", "VGVsZW1heA", "TmV0X1RW", "Q2FuYWxfMTJfQ0JB", "RWxfR2FyYWdl", "RmlsbV9BcnRz", "VW5pdmVyc2FsX0NoYW5uZWxfSEQ=", "RXVyb3BhX0V1cm9wYQ", "RXVyb25ld3M=", "Rm9vZF9OZXR3b3Jr", "RV9FbnRlcnRhaW5tZW50X1RlbGV2aXNpb24=", "Q00=", "UEFLQV9QQUtB", "SGlzdG9yeV8y", "U3lGeQ==", "VEJT", "VENN", "SEJPXzI=", "SEJPX1BsdXM=", "SEJPX0ZhbWlseQ==", "SEJPX0V4dHJlbWU=", "SEJPX011bmRp", "SEJPX1NpZ25hdHVyZQ==", "Q2FuYWxfUnVyYWw=", "VExD", "Q2FuYWxfZGVfbGFfY2l1ZGFk", "RGlzY292ZXJ5X0tpZHM=", "SFRW", "TkJBX1RW", "VW5pdmVyc2FsX0NpbmVtYQ==", "VW5pdmVyc2FsX0NvbWVkeQ==", "dW5pdmVyc2FsX0NyaW1l", "VW5pdmVyc2FsX1ByZW1pZXJl", "VW5pdmVyc2FsX1JlYWxpdHk=", "Q05OX2VuX0VzcGFub2w=", "Q2FuYWxfZGVfbGFzX2VzdHJlbGxhcw=="].map(k => [k, 6]),
     // C5
     ...["QzlOX0M0", "Q2FuYWxfQw==", "U29tb3NfUm9zYXJpbw==", "U29tb3NfU1RG", "QUJDX1RWX0M0"].map(k => [k, 5]),
     // C4
-    ...["QW1lcmljYV9QWQ==","QTI0X1BZ","RXZlbnRvczNfVVk=", "RXZlbnRvc18yX1VZ", "RVNQTjJfVVk=", "RXZlbnRvczJfUFk=", "RVNQTl9QWQ==", "RVNQTjJfUFk=", "NVJUVg==", "Q2FuYWwxMF9SaW9fTmVncm8=", "Q2FuYWxfNV9Sb3Nhcmlv", "VFZfQ2FtYXJh", "Q0hfMTJfUG9zYWRhcw==", "Q0JBMjQ=", "TWl4VFY=", "TG9jYWxfQ2FybG9zX1Bheg==", "Q2FuYWwxMF9DQkFfSEQ=", "VU5JQ0FOQUxfQzQ=", "TGF0YW1fUnVyYWw=", "U29tb3NfQ29ycmllbnRlcw==", "U29tb3NfU2FsdGE=", "U29tb3NfUmFmYWVsYQ==", "U29tb3NfUmVzaXN0ZW5jaWE=", "Q2FuYWxfMTNfUmlvXzR0bw==", "U29tb3NfRWxfVmFsbGU=", "Q2FuYWxfQ2l1ZGFkX01EUQ==", "NV9EaWFzX1BZ", "VGVsZWZlX0ludGVybmFjaW9uYWw=", "Q0hfMTNfQ29ycmllbnRlcw==", "U2hvd19TcG9ydHM=", "Q0hfOV9SZXNpc3RlbmNpYQ==", "VEVMRUZVVFVST19DNA==", "VGVsZWZlX05ldXF1ZW4=", "VGVsZWZlX1NhbHRh", "U05UX0M0", "UEFSQVZJU0lPTl9DNA==", "Tk9USUNJQVNfUFlfQzQ=", "TEFfVEVMRV9DNA==", "U1VSX1RWX0M0", "Q2FuYWwxMlVSVQ==", "Q2FuYWw0X1VSVQ==", "RVNQTl9VWQ==", "SEVJX05PVw==", "SEJPSEQ=", "Q2FuYWwxMF9VUlU=", "UlBDX0M0"].map(k => [k, 4]),
+    ...["TmFuZHV0aV9QeQ==", "Q2FuYWxfMl9NRFFfTEND", "VGVsZWZlX01EUV9IRA==", "U29tb3NfUGFyYW5h", "Q2FuYWxfMTFfRm9ybW9zYQ==", "Q2FuYWxfMTNfUmlvXzR0bw==", "QW1lcmljYV9QWQ==","QTI0X1BZ","RXZlbnRvczNfVVk=", "RXZlbnRvc18yX1VZ", "RVNQTjJfVVk=", "RXZlbnRvczJfUFk=", "RVNQTl9QWQ==", "RVNQTjJfUFk=", "NVJUVg==", "Q2FuYWwxMF9SaW9fTmVncm8=", "Q2FuYWxfNV9Sb3Nhcmlv", "VFZfQ2FtYXJh", "Q0hfMTJfUG9zYWRhcw==", "Q0JBMjQ=", "TWl4VFY=", "TG9jYWxfQ2FybG9zX1Bheg==", "Q2FuYWwxMF9DQkFfSEQ=", "VU5JQ0FOQUxfQzQ=", "TGF0YW1fUnVyYWw=", "U29tb3NfQ29ycmllbnRlcw==", "U29tb3NfU2FsdGE=", "U29tb3NfUmFmYWVsYQ==", "U29tb3NfUmVzaXN0ZW5jaWE=", "U29tb3NfRWxfVmFsbGU=", "Q2FuYWxfQ2l1ZGFkX01EUQ==", "NV9EaWFzX1BZ", "VGVsZWZlX0ludGVybmFjaW9uYWw=", "Q0hfMTNfQ29ycmllbnRlcw==", "U2hvd19TcG9ydHM=", "Q0hfOV9SZXNpc3RlbmNpYQ==", "VEVMRUZVVFVST19DNA==", "VGVsZWZlX05ldXF1ZW4=", "VGVsZWZlX1NhbHRh", "U05UX0M0", "UEFSQVZJU0lPTl9DNA==", "Tk9USUNJQVNfUFlfQzQ=", "TEFfVEVMRV9DNA==", "U1VSX1RWX0M0", "Q2FuYWwxMlVSVQ==", "Q2FuYWw0X1VSVQ==", "SEJPSEQ=", "UkND", "Q2FuYWwxMF9VUlU=", "RWR1Y2FuYWw=", "UlBDX0M0"].map(k => [k, 4]),
     // C3
-    ...["RVNQTjJIRA", "RXZlbnRvc19QWQ==", "Q2FuYWw3X1NERQ==","Qmxvb21iZXJn", "Q2FuYWxfVQ==", "RnJhbmNlMjRfRmxvdw==", "VFZfTmFjaW9uYWxfVXk=", "UmVkZV9SZWNvcmQ=", "U29tb3NfQmFoaWFfQmxhbmNh", "Q2FuYWxfM19Sb3Nhcmlv", "Q2FuYWw3X0JhaGlhX0JsYW5jYQ==", "Q2FuYWxfMTNfU0ZF", "Q2FuYWw5X0JhaGlhX0JsYW5jYQ==", "TmF0R2VvSEQ=", "VE5UX0hEX0FyZw==", "Q2FuYWxfVW5pdmVyc2lkYWQ=", "VE5UU2VyaWVz", "Q2FydG9vbk5ldHdvcms=", "Tmlja2Vsb2Rlb24=", "QWR1bHRfU3dpbQ==", "RXZlbnRvczFIRA"].map(k => [k, 3])
+    ...["Q2FuYWxfNzlfTURR", "RXZlbnRvc19QWQ==", "Q2FuYWw3X1NERQ==", "SEVJX05PVw==", "Qmxvb21iZXJn", "Q2FuYWxfVQ==", "RnJhbmNlMjRfRmxvdw==", "VFZfTmFjaW9uYWxfVXk=", "UmVkZV9SZWNvcmQ=", "U29tb3NfQmFoaWFfQmxhbmNh", "Q2FuYWxfM19Sb3Nhcmlv", "Q2FuYWw3X0JhaGlhX0JsYW5jYQ==", "Q2FuYWxfMTNfU0ZF", "Q2FuYWw5X0JhaGlhX0JsYW5jYQ==", "TmF0R2VvSEQ=", "VE5UX0hEX0FyZw==", "VE5UU2VyaWVz", "Q2FydG9vbk5ldHdvcms=", "Tmlja2Vsb2Rlb24=", "QWR1bHRfU3dpbQ==", "RXZlbnRvczFIRA"].map(k => [k, 3])
 ]);
 
 function getChannelNumber(getURL) {
@@ -44,34 +44,51 @@ function getChannelKeys(getURL) {
         "QTI0X1BZ": { keyId: "82e87fac1c33915ad5d344ffac1bbbb4", key: "db60bfaa0178071a5572e6e6ffb46ed3" }, //A24_PY
         "QW1lcmljYV9QWQ==": { keyId: "4e4a187474de8e29a8507d496c8a594f", key: "daab5ccf306d67749740f7ce02c07850" }, //America_PY
         "": { keyId: "", key: "" }, //
-        "Q2FuYWxfOTA=": { keyId: "ca50103f3285421e8be7da8c0c0e7a54", key: "3608e92a6feddf228c1f035ebb764426" }, //Canal_90_floEven
+        "Q2FuYWxfOTA=": { keyId: "ca50103f3285421e8be7da8c0c0e7a54", key: "3608e92a6feddf228c1f035ebb764426" }, //Canal_90floweve
+        "Q2FuYWxfMTFfRm9ybW9zYQ==": { keyId: "78cbce875d90e04f3f2b2e26261d5255", key: "d6c6a3c3ec898483608ff39e086cad66" }, //Canal_11_Formosa
         "": { keyId: "", key: "" }, //
         "": { keyId: "", key: "" }, //
-        "": { keyId: "", key: "" }, //
-        "Q2FuYWw3X1NERQ==": {         keyId: "eec52ca8f4d229ae6aae86b6835256ed", key: "506afbd8be37e388f5d3ceb7992069d4" }, //Canal7_SDE
+        "Q2FuYWw3X1NERQ==": { keyId: "eec52ca8f4d229ae6aae86b6835256ed", key: "506afbd8be37e388f5d3ceb7992069d4" }, //Canal7_SDE
         "Q2FuYWwxMF9SaW9fTmVncm8=": { keyId: "491adb9269c5c8ab41f83936d0b4a68f", key: "7ab85b000d8b5a06f542aff956bcb007" }, //Canal10_Rio_Negro
         "NVJUVg==": { keyId: "7caca846fda0ac308553f7eb7284a596", key: "256934a336abbc242378af4a2dfcac4e" }, //5RTV
         "": { keyId: "", key: "" }, //
+        "UkND": { keyId: "d8479ae2a7cc939e8382c8851927425d", key: "d1f89fc694800645ae926d9c5f13a1f6" }, //RCC
+        "RWR1Y2FuYWw=": { keyId: "4a51992671bd007fbf5d5c257ee62ea0", key: "69c4603a7136ec9eb515f8e0ca9c275c" }, //Educanal
+        "TmFuZHV0aV9QeQ==": { keyId: "46c3d8c42bb9799e5de5792e3fb45de4", key: "aed06fd292d278aa464da44752b9c313" }, //Nanduti_Py
         "": { keyId: "", key: "" }, //
         "": { keyId: "", key: "" }, //
-        "RVNQTjJfUFk=": { keyId: "0aab4bd18144c7316c35c74ccce96ddc", key: "3e6db98d9df4747108bd896cba0be57d" }, //ESPN2_PY1
-        "RVNQTl9QWQ==": { keyId: "4cbc5f5cbac72d38371bb63309e4a9d2", key: "dbc8de27da9726cd2e7659abb08e86ef" }, //ESPN_PY2
-        "RVNQTjNfVXktUHk=": { keyId: "ed53871dc50dcdc59a6271db3c8c51b3", key: "0c21dc8629e3f2e6fe9efa8b80dc447e" }, //ESPN3_Uy-Py3
+        "": { keyId: "", key: "" }, //
+        "": { keyId: "", key: "" }, //
+        "U29tb3NfVHVjdW1hbg==": { keyId: "a2004558039ee95097010029015316b4", key: "29960fc94fbf7a13c9de1308d508bc25" }, //Somos_Tucuman
+        "U29tb3NfUGFyYW5h": { keyId: "726c0ccee1985d0d59738bfe8e9aee2b", key: "0ff2c5a2381d8f0b7b92565dceb4ca58" }, //Somos_Parana
+        "U29tb3NfQmVsbF9WaWxsZQ==": { keyId: "4dd0d6fab23ee397e603bf1cad49cc3f", key: "84163f0d536884a640a509a9a0c937ee" }, //Somos_Bell_Ville
+        "Q2FuYWxfMTBfTURR": { keyId: "5f353c7f02f643da9049646fb835abcf", key: "ae8630fc13b9e4554c56bd0be31be74f" }, //Canal_10_MDQ
+        "VGVsZWZlX01EUV9IRA==": { keyId: "cd82180cb606cee7547f58298c4f8fcb", key: "844489c5f007fbe4afa36c8d64528d73" }, //Telefe_MDQ_HD
+        "": { keyId: "", key: "" }, //
+        "Q2FuYWxfNzlfTURR": { keyId: "32b5308f8e6d411eab8a8f1576f95e27", key: "0afb56f72dbf8a5555e30a6f086049ac" }, //Canal_79_MDQ
+        "Q2FuYWxfMl9NRFFfTEND": { keyId: "30691d3980864458cc24a230708cf003", key: "9f11ac9715b016312f6a222d0886c2af" }, //Canal_2_MDQ_LCC
+        "RWNvVHZfVGFuZGls": { keyId: "2bcb0593847aa273102a0546f8d51ce4", key: "f04591c07966e6678462dd94f99da66a" }, //EcoTv_Tandil
+        "VW5pdmVyc2lkYWRfTURR": { keyId: "4f6ab7206de81b4f19edcbc735a7f4ca", key: "5d05b9738b9a999a4b7c5b495866c21c" }, //Universidad_MDQ
+        "": { keyId: "", key: "" }, //
+        "": { keyId: "", key: "" }, //
+        "": { keyId: "", key: "" }, //
+        "": { keyId: "", key: "" }, //
+        "RVNQTjJfUFk=": { keyId: "0aab4bd18144c7316c35c74ccce96ddc", key: "3e6db98d9df4747108bd896cba0be57d" }, //ESPN2_PY creo que es 1
+        "RVNQTl9QWQ==": { keyId: "4cbc5f5cbac72d38371bb63309e4a9d2", key: "dbc8de27da9726cd2e7659abb08e86ef" }, //ESPN_PY creo que es 2
+        "RVNQTjNfVXktUHk=": { keyId: "ed53871dc50dcdc59a6271db3c8c51b3", key: "0c21dc8629e3f2e6fe9efa8b80dc447e" }, //ESPN3_Uy-Py creo que es 3
         "": { keyId: "", key: "" }, //
         "RVNQTl9VWQ==": { keyId: "6362e1f36fcb7ee3c47debd9140336ad", key: "9ba1d46c5b9c7a3130a5dabbf7155175" }, //ESPN_UY
         "RVNQTjJfVVk=": { keyId: "0d820100144772fed9f38b83650fa7e1", key: "ded8cc47b29b0eb0b0a87df22e721847" }, //ESPN2_UY
         "": { keyId: "", key: "" }, //
-        "RXZlbnRvc19IRF9VeQ==": { keyId: "48d0e34c8797c5c2a742d2630a8fb975", key: "fb5d12b9d8febe836e5670abd003ddca" }, //Eventos_HD_Uy1
-        "RXZlbnRvc18yX1VZ": { keyId: "87bfded2bdfbd3ad9dce4d30b2739fd1", key: "e80b0d66d60fa0a2d24d8b36055a6fef" }, //Eventos_2_UY
+        "RXZlbnRvc19IRF9VeQ==": { keyId: "48d0e34c8797c5c2a742d2630a8fb975", key: "fb5d12b9d8febe836e5670abd003ddca" }, //Eventos_HD_Uy - Charrua Television
+        "RXZlbnRvc18yX1VZ": { keyId: "87bfded2bdfbd3ad9dce4d30b2739fd1", key: "e80b0d66d60fa0a2d24d8b36055a6fef" }, //Eventos_2_UY - Canal 4 Paysandu
         "RXZlbnRvczNfVVk=": { keyId: "f774b06a300783596f27b552226de9c0", key: "4d6256b28b487bcf906bcf0328635747" }, //Eventos3_UY
         "": { keyId: "", key: "" }, //
         "": { keyId: "", key: "" }, //
-        "": { keyId: "", key: "" }, //
-        "": { keyId: "", key: "" }, //
-        "RXZlbnRvc19QWQ==": { keyId: "2bdfc30f2a7591e107d8c84458c395dd", key: "dcee0d6420b6b597fba15d3c4411a71e" }, //Eventos_PY1
+        "RXZlbnRvc19QWQ==": { keyId: "2bdfc30f2a7591e107d8c84458c395dd", key: "dcee0d6420b6b597fba15d3c4411a71e" }, //Eventos_PY
         "RXZlbnRvczJfUFk=": { keyId: "0900ce66b82de0fd07aa8f12a48f29a2", key: "e5556dba688fda637374ab5c87d7cda6" }, //Eventos2_PY
         "Q2FuYWxfMTNfUmlvXzR0bw==": { keyId: "6f4439b8c624ac6a8abba87c3621d580", key: "c8798da6ee3e0934089ab2ab9fe5d5b7" }, //Canal_13_Rio_4to
-        "VW5pb25UVg==": { keyId: "bc47bd761413375f1b6e7333a51de41a", key: "ccf01c0661ae65f273b79eeda0ec0f3e" }, //UniontvPy
+        "VW5pb25UVg==": { keyId: "bc47bd761413375f1b6e7333a51de41a", key: "ccf01c0661ae65f273b79eeda0ec0f3e" }, //UnionTV
         "U29tb3NfU2FuX1BlZHJv": { keyId: "5ed7bfb5a7be4d99df70ed73852098d4", key: "df5123a8a8160b62b51c7cb6001be23c" }, //Somos_San_Pedro
         "U29tb3NfTm9ydGU=": { keyId: "ee8a6cc35fdb4ab7adeed9d16593459f", key: "5ca774838d5c887f7a8d7dee64b9a6b0" }, //Somos_Norte
         "VmVudXNfTWVkaWE=": { keyId: "835af7d77bd13621ba044ab931e5e89f", key: "753ed98985b348ab7bf3c0a2b24930eb" }, //Venus_Media
@@ -306,7 +323,7 @@ function getChannelKeys(getURL) {
         "SW52ZXN0aWdhY2lvbl9QZXJpb2Rpc3RpY2E=": { keyId: "5299f96f873aa0f0e47edc4e15784717", key: "9d53176b0969492f2d93f1867be1dce1" }, // IP Noticias
         "UlBDX0M0": { keyId: "a8093cdcb2d504bd38f16764bd21b6e5", key: "bfcf3b033b5f0b5ae020751a6746326f" }, // el trece py
         "QWR1bHRfU3dpbQ==": { keyId: "9be1432e1e594c8d0648a44d3d9f0c46", key: "8e6c785b14d973c504074b1920f11b15" }, // AS
-         "Q2FuYWxfZGVfbGFfY2l1ZGFk": { keyId: "5ee7842b3cf24d1dba088365fa5d0543", key: "69cec006409823c06fbf2866a231b4f7" }, // El Canal de la Ciudad
+        "Q2FuYWxfZGVfbGFfY2l1ZGFk": { keyId: "5ee7842b3cf24d1dba088365fa5d0543", key: "69cec006409823c06fbf2866a231b4f7" }, // El Canal de la Ciudad
     };
 
     channelList[0].name = atob(getURL);
@@ -331,14 +348,11 @@ function getParameterByName(name) {
 // var getURL = getParameterByName('get');
 // channelList = getChannelKeys(getURL);
 
-
-
-
 async function getURLwithToken() {
     let token = sessionStorage.getItem('token')
     if (!token) {
         // const url = 'https://chromecast.cvattv.com.ar/live/c7eds/La_Nacion/SA_Live_dash_enc/La_Nacion.m3u8';
-        const url = 'https://chromecast.cvattv.com.ar/live/c7eds/La_Nacion/SA_Live_dash_enc_c/La_Nacion.m3u8';
+        const url = 'https://chromecast.cvattv.com.ar/live/c7eds/La_Nacion/SA_Live_dash_enc_wl/La_Nacion.m3u8';
         let response = await fetch(url, { signal: AbortSignal.timeout(5000) });
         if (response.redirected) {
             const regex = /(https:\/\/.+?)(?=\/live)/;
@@ -357,13 +371,12 @@ async function getURLwithToken() {
 let mt = [
     "chromecast",
     "cdn",
-
-    // "edge-live01-cte",
-    // "edge-live02-mun",
-    // "edge-mix02-cte",
-    // "edge-mix04-coe",
-    // "edge-mix05-coe",
-    // "edge2-ccast-sl",
+    "edge-live01-cte",
+    "edge-live02-mun",
+    "edge-mix02-cte",
+    "edge-mix04-coe",
+    "edge-mix05-coe",
+    "edge2-ccast-sl",
 
     //No funciona
     // "edge1-ccast-sl",
@@ -406,7 +419,6 @@ let mt = [
     // "edge-mix01-mus",
     // "edge-mix03-mus",
 ]
-
 // Comprueba dominios y lo asigna
 let mt2 = [...mt];
 async function getValidMpd(channelInfo) {
@@ -457,8 +469,8 @@ async function getValidMpd(channelInfo) {
 
 
     }
-      mt2 = [...mt]
+ mt2 = [...mt]
     const errorMsg = document.querySelector('.homeScreen #appError'); errorMsg && (errorMsg.style.display = 'block');
     const animLoader = document.querySelector('.homeScreen .loader'); animLoader && (animLoader.style.display = 'none');
-    
+    throw new Error("No valid MPD URL found. Reloading list...");
 }
