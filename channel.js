@@ -472,5 +472,4 @@ async function getValidMpd(channelInfo) {
  mt2 = [...mt]
     const errorMsg = document.querySelector('.homeScreen #appError'); errorMsg && (errorMsg.style.display = 'block');
     const animLoader = document.querySelector('.homeScreen .loader'); animLoader && (animLoader.style.display = 'none');
-    throw new Error("No valid MPD URL found. Reloading list...");
 }
