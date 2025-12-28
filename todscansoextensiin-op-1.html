@@ -6,14 +6,11 @@
     <title>--</title>
     <style>
   body {
-            width: 100% !important;
-            height: 100% !important;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
             padding: 0;
-            left: 0;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;            
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #0f0f23 0%, #1a1a3a 100%);
             color: white;
@@ -300,19 +297,20 @@
 <body>
     <!-- Mensaje de carga -->
     <div id="loading-message" class="message-container">
-        <div class="message-box">
+        
             <div class="loading-spinner"></div>
-            <div class="message-title">Cargando</div>
-            <div class="message-text">Por favor espere...</div>
-        </div>
+            <div class="message-title">Cargando..</div>
+            
+        
     </div>
 
     <!-- Mensaje de extensión faltante -->
    
   
-   <div class="container">
-                
+   <div class="">
+
                 <div id="alerta-extension" class="hidden alert-card text-center bg-dark bg-gradient">
+                  
                 <i class="bx bx-error-circle boxicon"></i>
              <h2>⚠️Instalar Extensión VideoPlayer</h2>
             <p> Para ver los canales, necesitas añadir la extensión VideoPlayer.
