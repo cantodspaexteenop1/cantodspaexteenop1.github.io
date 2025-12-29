@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>--</title>
     <style>
-  body {
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+  html,
+        body {
+            width: 100% !important;
+            height: 100% !important;
             margin: 0;
             padding: 0;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3a 100%);
+            background-color: #05081c;
             color: white;
             overflow: hidden;
         }
 
         :root {
-            --color-primary: #51E0C0;
-            --color-secondary: #2a2a4a;
-            --color-danger: #ff4757;
+            --color-primary: #fff;
+            --color-secondary: #05081c;
+            --color-danger:#05081c;
         }
 
         /* Estilos para mensajes */
@@ -38,11 +38,11 @@
         }
 
         .message-box {
-            background: rgba(42, 42, 74, 0.95);
-            border: 2px solid var(--color-primary);
+            background:#333;
+            border: 2px solid gold;
             border-radius: 20px;
             padding: 40px;
-            max-width: 500px;
+            max-width: 480px;
             text-align: center;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(10px);
@@ -62,13 +62,13 @@
         }
 
         .message-icon {
-            font-size: 4rem;
+            font-size: 1.7rem;
             margin-bottom: 20px;
             color: var(--color-primary);
         }
 
         .message-title {
-            font-size: 1.8rem;
+            font-size: 1.1rem;
             font-weight: bold;
             margin-bottom: 15px;
             color: var(--color-primary);
@@ -80,25 +80,24 @@
             margin-bottom: 30px;
             color: #e0e0e0;
         }
-
         .install-button {
-            background: linear-gradient(45deg, var(--color-primary), #3ecf8e);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-size: 1.1rem;
+            background:#0f0;
+            color: #000;
+            border: 2px solid ;
+            padding: 10px 25px;
+            border-radius: 10px;
+            font-size: 1rem;
             font-weight: bold;
             cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
+            margin-left: 15px;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(81, 224, 192, 0.3);
         }
 
         .install-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(81, 224, 192, 0.5);
+            background: #fff;
+            color: #000;
+          transform: translateY(-2px);
+            box-shadow: 0 8px 30px #fff;
         }
 
         .retry-button {
@@ -120,79 +119,26 @@
           transform: translateY(-2px);
             box-shadow: 0 8px 30px #fff;
         }
+     .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(81, 224, 192, 0.1);
+            border-left: 4px solid var(--color-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
 
-        .loading-spinner {
-       
- animation: rotate 1s infinite;  
-  height: 50px;
-  width: 50px;
-}
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
 
-.loading-spinner:before,
-.loading-spinner:after {   
-  border-radius: 50%;
-  content: '';
-  display: block;
-  height: 20px;  
-  width: 20px;
-}
-.loading-spinner:before {
-  animation: ball1 1s infinite;  
-  background-color: #cb2025;
-  box-shadow: 30px 0 0 #f8b334;
-  margin-bottom: 10px;
-}
-.loading-spinner:after {
-  animation: ball2 1s infinite; 
-  background-color: #00a096;
-  box-shadow: 30px 0 0 #97bf0d;
-}
-@keyframes rotate {
-  0% { 
-    -webkit-transform: rotate(0deg) scale(0.8); 
-    -moz-transform: rotate(0deg) scale(0.8);
-  }
-  50% { 
-    -webkit-transform: rotate(360deg) scale(1.2); 
-    -moz-transform: rotate(360deg) scale(1.2);
-  }
-  100% { 
-    -webkit-transform: rotate(720deg) scale(0.8); 
-    -moz-transform: rotate(720deg) scale(0.8);
-  }
-}
+            100% {
+                transform: rotate(360deg);
+            }
+        }
 
-@keyframes ball1 {
-  0% {
-    box-shadow: 30px 0 0 #f8b334;
-  }
-  50% {
-    box-shadow: 0 0 0 #f8b334;
-    margin-bottom: 0;
-    -webkit-transform: translate(15px,15px);
-    -moz-transform: translate(15px, 15px);
-  }
-  100% {
-    box-shadow: 30px 0 0 #f8b334;
-    margin-bottom: 10px;
-  }
-}
-
-@keyframes ball2 {
-  0% {
-    box-shadow: 30px 0 0 #97bf0d;
-  }
-  50% {
-    box-shadow: 0 0 0 #97bf0d;
-    margin-top: -20px;
-    -webkit-transform: translate(15px,15px);
-    -moz-transform: translate(15px, 15px);
-  }
-  100% {
-    box-shadow: 30px 0 0 #97bf0d;
-    margin-top: 0;
-  }
-}
         .hidden {
             display: none !important;
         }
@@ -221,73 +167,6 @@
         .error-box {
             border-color: var(--color-danger);
         }
-      .alert-card {
-    background-color: #333;
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 600px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin: 20px auto;
-}
-
-.alert-card h2 {
-    margin-top: 0;
-    font-size: 24px;
-}
-
-.alert-card .boxicon {
-    font-size: 48px;
-    color: #ff0;
-}
-
-.alert-card p {
-    margin: 10px 0;
-    color: #ebebeb;
-}
-
-@media (max-width: 480px) {
-    .alert-card {
-        max-width: 90%;
-        padding: 5px;
-        margin-right: 50px;
-    }
-
-    .alert-card h2 {
-        font-size: 20px;
-    }
-
-    .alert-card .boxicon {
-        font-size: 36px;
-    }
-
-    .alert-card p {
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-    .alert-card {
-        max-width: 80%;
-        padding: 25px;
-    }
-
-    .alert-card h2 {
-        font-size: 22px;
-    }
-
-    .alert-card .boxicon {
-        font-size: 42px;
-    }
-
-    .alert-card p {
-        font-size: 16px; 
-    }
-}
- a {
-                        color: ;
-                        text-decoration: underline;
-                }
       
     </style>
  <script src="https://cantodspaexteenop1.github.io/channel-1dife.js"></script>
@@ -299,33 +178,38 @@
     <div id="loading-message" class="message-container">
         
             <div class="loading-spinner"></div>
-            <div class="message-title">Cargando..</div>
+            <div class="message-title"></div>
             
         
     </div>
 
     <!-- Mensaje de extensión faltante -->
    
-  
-   <div class="">
-
-                <div id="alerta-extension" class="hidden alert-card text-center bg-dark bg-gradient">
-                  
-                <i class="bx bx-error-circle boxicon"></i>
-             <h2>⚠️Instalar Extensión VideoPlayer</h2>
-            <p> Para ver los canales, necesitas añadir la extensión VideoPlayer.
+    <!-- Mensaje de extensión faltante -->
+    <div id="alerta-extension" class="message-container hidden">
+        <div class="message-box">
+            <div class="message-icon">⚠️</div>
+            <div class="message-title">Instalar Extensión VideoPlayer</div>
+            <div class="message-text">
+                 Para ver los canales, necesitas añadir la extensión VideoPlayer.
                 <br> Es un reproductor nativo para videos.<br>
               Una vez instalada la extensión en tu Navegador,<br> recargar la página.<br>
               Recuerda:La Opción FL estan disponibles en Argentina,Paraguay,Uruguay,<br>
-             sino estas en estos paises usar VPN conectado estos Paises</p>
-      <a class="btn btn-secondary rounded retry-button"
-       href="https://chromewebstore.google.com/detail/reproductor-mpdm3u8m3uepg/opmeopcambhfimffbomjgemehjkbbmji"
-     target="_blank">Instalar ahora</a>
-              <button class="retry-button" onclick="initializePlayer()" >
-                Recargar
-            </button>       
-     </div>
+             sino estas en estos paises usar VPN conectado estos Paises
+            </div>
+            <a href="https://chromewebstore.google.com/detail/videoplayer-mpdm3u8m3uepg/opmeopcambhfimffbomjgemehjkbbmji"
+                class="install-button" target="_blank">
+                Instalar Extensión
+            </a>
+            <button class="retry-button" onclick="initializePlayer()">
+                Reintentar
+            </button>
+        </div>
     </div>
+  
+  
+  
+
   
 
     <!-- Reproductor -->
@@ -451,7 +335,7 @@
                 console.log("Base64Key:", base64Key);
 
                 // Construir la URL de la extensión con el header específico
-                var extensionUrl = `chrome-extension://opmeopcambhfimffbomjgemehjkbbmji/pages/player.html#${mpdBase}?ck=${encodeURIComponent(base64Key)}&headers=eyJPcmlnaW4iOiAiaHR0cHM6Ly9wb3J0YWwuYXBwLmZsb3cuY29tLmFyIiwgIlJlZmVyZXIiOiJodHRwczovL3BvcnRhbC5hcHAuZmxvdy5jb20uYXIifQ==`;
+                var extensionUrl = `chrome-extension://opmeopcambhfimffbomjgemehjkbbmji/pages/player.html#${mpdBase}?ck=${encodeURIComponent(base64Key)}&headers=eyJvcmlnaW4iOiJodHRwczovL3BvcnRhbC5hcHAuZmxvdy5jb20uYXIiLCJyZWZlcmVyIjoiaHR0cHM6Ly9wb3J0YWwuYXBwLmZsb3cuY29tLmFyLyJ9`;
 
                 console.log("Extension URL:", extensionUrl);
 
@@ -523,6 +407,8 @@
             console.error('Error global:', e.error);
         });
     </script>
+  
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js' type='text/javascript'></script> 
 </body>
 
 </html>
