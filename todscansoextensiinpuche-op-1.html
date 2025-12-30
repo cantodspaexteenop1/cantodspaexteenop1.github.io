@@ -654,12 +654,97 @@ async function getValidMpd(channelInfo) {
             console.log("Error fetching URL:", error);
         }
 
+    // let randomIndex = Math.floor(Math.random() * mt2.length);
+    // let url = `https://${mt2[randomIndex]}.cvattv.com.ar/live/c${channelToLoad.number || 3}eds/${atob(channelToLoad.getURL)}/SA_Live_dash_enc/${atob(channelToLoad.getURL)}.m3u8`;
+    
+    // let url = `https://${mt2[0]}.cvattv.com.ar/live/c${channelToLoad.number || 3}eds/${atob(channelToLoad.getURL)}/SA_Live_dash_enc/${atob(channelToLoad.getURL)}.mpd`;
+    // let url = `https://edge-live15-sl.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzUxMzE3NzgxIiwic2lwIjoiMjAxLjE3Ny45OC4xNzgiLCJwYXRoIjoiL2xpdmUvYzdlZHMvTGFfTmFjaW9uL1NBX0xpdmVfZGFzaF9lbmMvIiwic2Vzc2lvbl9jZG5faWQiOiI1Yjc0N2E0NGU2ZjMxNjM3Iiwic2Vzc2lvbl9pZCI6IiIsImNsaWVudF9pZCI6IiIsImRldmljZV9pZCI6IiIsIm1heF9zZXNzaW9ucyI6MCwic2Vzc2lvbl9kdXJhdGlvbiI6MCwidXJsIjoiaHR0cHM6Ly8yMDEuMjM1LjY2LjEyMiIsImF1ZCI6IjEwOCIsInNvdXJjZXMiOls4NSwxNDQsMTg0LDg2LDg4XX0=.b9ImLm941UoCmyftDMI-9nq1LrIQ7G7cJAJdMupPGGO2MHr0-PLYPGQpD4lbwbuWIpNV-TKaueJRz7_GPKdOrA==/live/c${channelToLoad.number || 3}eds/${atob(channelToLoad.getURL)}/SA_Live_dash_enc/${atob(channelToLoad.getURL)}.mpd`;
+    // let url = 'https://qn-01282-hor-1-07-1---7169-magk.http.global.dns.qwilted-cds.cqloud.com/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzQ3NTMxNjMzIiwic2lwIjoiMTkwLjQ4LjY5LjE3MiIsInBhdGgiOiIvbGl2ZS9jN2Vkcy9MYV9OYWNpb24vU0FfTGl2ZV9kYXNoX2VuYy8iLCJzZXNzaW9uX2Nkbl9pZCI6ImYwMmJmM2ZjNGUxMDMxOWMiLCJzZXNzaW9uX2lkIjoiIiwiY2xpZW50X2lkIjoiIiwiZGV2aWNlX2lkIjoiIiwibWF4X3Nlc3Npb25zIjowLCJzZXNzaW9uX2R1cmF0aW9uIjowLCJ1cmwiOiJodHRwczovLzE4MS4xMi4zNi4xNTAiLCJhdWQiOiIyNzciLCJzb3VyY2VzIjpbODZdfQ==.UeeKkrGxIjaLtmDVTnN8ErJcA4-Ypi8tTf-85nfdnICkr6JIa3FX3iMNmOy9DD16gIN_wKYBd4TxgcdSCcWf3Q==/live/c3eds/La_Nacion/SA_Live_dash_enc/La_Nacion.mpd'
+    // let url = `https://${mt2[0]}.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzMzMjExMTYxIiwic2lwIjoiMjAxLjE3Ny43My4yMTYiLCJwYXRoIjoiL2xpdmUvYzdlZHMvTGFfTmFjaW9uL1NBX0xpdmVfZGFzaF9lbmMvIiwic2Vzc2lvbl9jZG5faWQiOiI3ZGYwNzMyYWY5MmE3ZTA1Iiwic2Vzc2lvbl9pZCI6IiIsImNsaWVudF9pZCI6IiIsImRldmljZV9pZCI6IiIsIm1heF9zZXNzaW9ucyI6MCwic2Vzc2lvbl9kdXJhdGlvbiI6MCwidXJsIjoiaHR0cHM6Ly8yMDEuMjM1LjY2LjExNCIsImF1ZCI6IjgxIiwic291cmNlcyI6Wzg1LDE0NCw4Niw4OF19.-8iWhQwMfdW6lhZp52d_MlCPr9PWiZ1UnUK460IkCVvQCunasIODmekjgjJlD6T-IwDEKfQBk1ZANWUZxbTHHA==/live/c${channelToLoad.number || 3}eds/${atob(channelToLoad.getURL)}/SA_Live_dash_enc/${atob(channelToLoad.getURL)}.mpd`;
+    
+    /*
+    try {
+      let response = await fetch(url, { signal: AbortSignal.timeout(5000) }); // Cancel at 5s if response timeout
+      if (!response.ok) throw new Error('MPD Caido')
+      
+      console.log('Antes: ', response)
 
+      const MPDUrl = response.url.replace('m3u8', 'mpd')
+      const MPDresponse = await fetch(MPDUrl)
+      const mpd_MP4 = await readStream(MPDresponse.body.getReader())
+      // console.log(`${response.url.slice(0, response.url.indexOf('SA_Live_dash_enc')+17)}${mpd_MP4}`)
+      
+      
+      const urlFromMpd = await readStream(response.body.getReader())
+      // console.log(urlFromMpd)
+      const streamUrl = (response.redirected) ? `${response.url.slice(0, response.url.indexOf('SA_Live_dash_enc')+17)}${urlFromMpd}` : `https://edge-live15-sl.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzUxMzE3NzgxIiwic2lwIjoiMjAxLjE3Ny45OC4xNzgiLCJwYXRoIjoiL2xpdmUvYzdlZHMvTGFfTmFjaW9uL1NBX0xpdmVfZGFzaF9lbmMvIiwic2Vzc2lvbl9jZG5faWQiOiI1Yjc0N2E0NGU2ZjMxNjM3Iiwic2Vzc2lvbl9pZCI6IiIsImNsaWVudF9pZCI6IiIsImRldmljZV9pZCI6IiIsIm1heF9zZXNzaW9ucyI6MCwic2Vzc2lvbl9kdXJhdGlvbiI6MCwidXJsIjoiaHR0cHM6Ly8yMDEuMjM1LjY2LjEyMiIsImF1ZCI6IjEwOCIsInNvdXJjZXMiOls4NSwxNDQsMTg0LDg2LDg4XX0=.b9ImLm941UoCmyftDMI-9nq1LrIQ7G7cJAJdMupPGGO2MHr0-PLYPGQpD4lbwbuWIpNV-TKaueJRz7_GPKdOrA==/live/c${channelToLoad.number || 3}eds/${atob(channelToLoad.getURL)}/SA_Live_dash_enc/${urlFromMpd}`;
+      // const streamUrl = `https://${mt2[0]}.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzMzMjExMTYxIiwic2lwIjoiMjAxLjE3Ny43My4yMTYiLCJwYXRoIjoiL2xpdmUvYzdlZHMvTGFfTmFjaW9uL1NBX0xpdmVfZGFzaF9lbmMvIiwic2Vzc2lvbl9jZG5faWQiOiI3ZGYwNzMyYWY5MmE3ZTA1Iiwic2Vzc2lvbl9pZCI6IiIsImNsaWVudF9pZCI6IiIsImRldmljZV9pZCI6IiIsIm1heF9zZXNzaW9ucyI6MCwic2Vzc2lvbl9kdXJhdGlvbiI6MCwidXJsIjoiaHR0cHM6Ly8yMDEuMjM1LjY2LjExNCIsImF1ZCI6IjgxIiwic291cmNlcyI6Wzg1LDE0NCw4Niw4OF19.-8iWhQwMfdW6lhZp52d_MlCPr9PWiZ1UnUK460IkCVvQCunasIODmekjgjJlD6T-IwDEKfQBk1ZANWUZxbTHHA==/live/c${channelToLoad.number || 3}eds/${atob(channelToLoad.getURL)}/SA_Live_dash_enc/${urlFromMpd}`
+      let response2 = await fetch(streamUrl)
+    } catch (error) {
+      console.log("Error fetching URL:", error);
+      //mt2.splice(0, 1);
     }
+    */
+  }
   mt2 = [...mt]
   const errorMsg = document.querySelector('.homeScreen #appError'); errorMsg && (errorMsg.style.display = 'block');
   const animLoader = document.querySelector('.homeScreen .loader'); animLoader && (animLoader.style.display = 'none');
+  throw new Error("No valid MPD URL found. Reloading list...");
 }
+
+setupPlayer();
+
+// Deteccion controles TV
+let pressed = "";
+let timer;
+const runTimer = () => {
+  timer = setTimeout(() => {
+    indexActivo = Number(pressed) - 1;
+    changeChannel(null, pressed, null);
+    pressed = "";
+    document.querySelector(".channelNumber").style.visibility = "hidden";
+  }, 2000);
+};
+
+document.addEventListener("keypress", (e) => {
+  if (!(e.keyCode >= 48 && e.keyCode <= 57)) return;
+  if (pressed.length > 2) return;
+  document.querySelector(".channelNumber").style.visibility = "visible";
+  const channelNumberBox = document.querySelector(".channelNumber span");
+  pressed += e.key;
+  channelNumberBox.innerText = pressed;
+  if (pressed.length >= 1) {
+    clearTimeout(timer);
+    runTimer();
+  }
+});
+
+// Touch slide canales android
+const debounceDelay = 50;
+let debounceTimeout;
+let startX = 0;
+
+document.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+});
+
+document.addEventListener('touchmove', (e) => {
+  const chnList = document.querySelector(".channelList")
+  const currentX = e.touches[0].clientX; 
+
+  if (!e.target.className.match("jw-reset")) return;
+  clearTimeout(debounceTimeout);
+  debounceTimeout = setTimeout(() => {
+        if (currentX < startX) {
+          chnList.style.transform = `translateX(-${chnList.offsetWidth}px)`
+          document.querySelector(':root').style.setProperty('--leftPos', '0px')
+        } else {
+          chnList.style.transform = "translateX(0px)"
+          document.querySelector(':root').style.setProperty('--leftPos', `${chnList.offsetWidth}px`)
+
+        }
+  }, debounceDelay);
+});
 </script>
    
 </head>
