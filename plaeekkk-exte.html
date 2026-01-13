@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>-</title>
+<style>
+        :root {
+            --nav_pantalla: 80px;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+    #player {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* Aspect ratio 16:9 */
+            background: #000;
+        }
+        #player iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .hidden {
+            display: none;
+        }
+
+        .alert-card {
+            background-color: #333;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin: 20px auto;
+        }
+
+        .alert-card h2 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .alert-card .boxicon {
+            font-size: 48px;
+            color: #ff0;
+        }
+
+        .alert-card p {
+            margin: 10px 0;
+            color: #ebebeb;
+        }
+
+        @media (max-width: 480px) {
+            .alert-card {
+                max-width: 90%;
+                padding: 5px;
+                /* margin-right: 50px; */
+            }
+
+            .alert-card h2 {
+                font-size: 20px;
+            }
+
+            .alert-card .boxicon {
+                font-size: 36px;
+            }
+
+            .alert-card p {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .alert-card {
+                max-width: 80%;
+                padding: 25px;
+            }
+
+            .alert-card h2 {
+                font-size: 22px;
+            }
+
+            .alert-card .boxicon {
+                font-size: 42px;
+            }
+
+            .alert-card p {
+                font-size: 16px;
+            }
+        }
+
+        .btn {
+            color: #000 ;
+            text-decoration: underline;
+            background: #0f0;
+            border: 2px solid ;
+            padding: 10px 25px;
+            border-radius: 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-left: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+              transform: translateY(-2px);
+            box-shadow: 0 8px 30px white;
+        }
+
+    </style>
+    <script src="https://cantodspaexteenop1.github.io/kkk.js"></script>
+
+</head>
+
+<body>
+    <!-- Mensaje de carga -->
+    <div id="loading-message" class="message-container">
+        <div class="">
+ 
+        </div>
+    </div>
+
+    <!-- Mensaje de extensión faltante -->
+   
+ <div class="container">
+        <div id="alerta-extension" class="hidden alert-card text-center bg-dark bg-gradient">
+            <i class="bx bx-error-circle boxicon"></i>
+            <h2>Instalar Extensión VideoPlayer</h2>
+            <p>Para ver los canales, necesitas añadir la extensión VideoPlayer</p>
+            <p>Es un reproductor nativo para videos.</p>
+            <p>Una vez instalada la extensión en tu Navegador, recargar esta página.</p>
+            <p>Recuerda: estos canales estan disponibles en Argentina, Paraguay, Uruguay o con VPN de estos
+                Paises.</p>
+            <!-- <p>Una vez instalada la extensión, recarga la página.</p> -->
+            <a class="btn btn-secondary rounded"
+                href="https://chromewebstore.google.com/detail/reproductor-mpdm3u8m3uepg/opmeopcambhfimffbomjgemehjkbbmji"
+                target="_blank">Instalar ahora</a>
+        </div>
+    </div>
+
+          
+
+    <!-- Reproductor -->
+    <div id="player" class="hidden"></div>
+
+    <script>
+        const STREAM_URL = "chrome-extension://opmeopcambhfimffbomjgemehjkbbmji/pages/player.html#https://localhost/?headers=eyJPcmlnaW4iOiAiaHR0cHM6Ly9wb3J0YWwuYXBwLmZsb3cuY29tLmFyIiwgIlJlZmVyZXIiOiJodHRwczovL3BvcnRhbC5hcHAuZmxvdy5jb20uYXIifQ==";
+
+        let currentChannel;
+        let mpdBase;
+        let iframeAdded = false;
+
+        // Función para mostrar/ocultar elementos
+        function showElement(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        function hideElement(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+
+        function hideAllMessages() {
+            hideElement('loading-message');
+            hideElement('alerta-extension');
+        }
+
+        // Función para obtener parámetros de URL
+        function getParameterByName(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Función para verificar si la extensión está instalada
+        function isExtensionInstalled(installedCallback, notInstalledCallback) {
+            const img = document.createElement('img');
+            img.onload = installedCallback;
+            img.onerror = notInstalledCallback;
+            img.src = 'chrome-extension://opmeopcambhfimffbomjgemehjkbbmji/play-on.png';
+        }
+
+        // Función para agregar el iframe al reproductor cuando hay error
+        function addIframeToPlayer() {
+            if (!iframeAdded) {
+                console.log("Agregando iframe de respaldo al reproductor...");
+
+                const playerDiv = document.getElementById('player');
+
+                // Limpiar contenido previo del reproductor
+                playerDiv.innerHTML = '';
+
+                // Crear y agregar iframe
+                const iframe = document.createElement('iframe');
+                iframe.className = 'extension-iframe';
+                iframe.src = STREAM_URL;
+                iframe.allow = 'encrypted-media *;';
+                iframe.frameBorder = '0';
+
+                // 👉 lo ocultamos
+                iframe.style.display = "none";
+
+                // 👉 Espera 1 segundo cuando cargue el iframe y reinicia la página
+                iframe.onload = () => {
+                    console.log("Iframe cargado, reiniciando en 1 segundo...");
+                    setTimeout(() => {
+                        location.reload();
+                    }, 500);
+                };
+
+                playerDiv.appendChild(iframe);
+
+                iframeAdded = true;
+
+                // Mostrar el reproductor
+                hideAllMessages();
+                showElement('player');
+            }
+        }
+
+        // Función para cargar el canal después del reinicio
+        async function loadChannelStream() {
+            try {
+                console.log("Cargando canal después del reinicio...");
+
+                // Verificar si channelList existe
+                if (typeof channelList === 'undefined' || typeof getChannelKeys === 'undefined') {
+                    throw new Error('Los archivos de canales no se cargaron correctamente');
+                }
+
+                const channels = getChannelKeys(getParameterByName('get'));
+                if (!channels || channels.length === 0) {
+                    throw new Error('No se encontraron canales válidos');
+                }
+
+                currentChannel = channels[0];
+                console.log("Canal seleccionado:", currentChannel);
+
+                // Verificar keyId y key
+                const keyId = currentChannel.keyId;
+                const key = currentChannel.key;
+
+                if (!keyId || !key) {
+                    throw new Error('KeyId o Key no definidos en el canal seleccionado');
+                }
+
+                // Obtener MPD base
+                if (typeof getValidMpd !== 'undefined') {
+                    mpdBase = await getValidMpd();
+                } else {
+                    throw new Error('Función getValidMpd no disponible');
+                }
+
+                if (!mpdBase) {
+                    throw new Error('No se pudo obtener una URL de stream válida');
+                }
+
+                console.log("MPD obtenido:", mpdBase);
+
+                // Convertir keyId y key a una cadena JSON
+                var keyString = `"${keyId}":"${key}"`;
+                var base64Key = btoa(keyString);
+
+                console.log("KeyString:", keyString);
+                console.log("Base64Key:", base64Key);
+
+                // Construir la URL de la extensión con el header específico
+                var extensionUrl = `chrome-extension://opmeopcambhfimffbomjgemehjkbbmji/pages/player.html#${mpdBase}?ck=${encodeURIComponent(base64Key)}&headers=eyJPcmlnaW4iOiAiaHR0cHM6Ly9wb3J0YWwuYXBwLmZsb3cuY29tLmFyIiwgIlJlZmVyZXIiOiJodHRwczovL3BvcnRhbC5hcHAuZmxvdy5jb20uYXIifQ==`;
+
+                console.log("Extension URL:", extensionUrl);
+
+                // Mostrar el reproductor
+                const playerDiv = document.getElementById("player");
+
+                isExtensionInstalled(
+                    () => {
+                        console.log("Extensión detectada, cargando canal...");
+                        hideAllMessages();
+                        playerDiv.classList.remove("hidden");
+                        playerDiv.innerHTML = `<iframe id="iframe" allow="encrypted-media" allowfullscreen src="${extensionUrl}"></iframe>`;
+                    },
+                    () => {
+                        console.log("Extensión no detectada después del reinicio");
+                        hideAllMessages();
+                        document.getElementById("alerta-extension").classList.remove("hidden");
+                    }
+                );
+
+            } catch (error) {
+                console.error("Error cargando canal:", error);
+                hideAllMessages();
+                alert(`Error: ${error.message}`);
+            }
+        }
+
+        // Función principal de inicialización
+        function initializePlayer() {
+            console.log("Inicializando reproductor...");
+
+            // Verificar si es la segunda carga (después del reload)
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('reloaded') === 'true') {
+                console.log("Segunda carga detectada, cargando canal...");
+                loadChannelStream();
+                return;
+            }
+
+            // Primera carga - verificar extensión y iniciar servidor
+            isExtensionInstalled(
+                () => {
+                    console.log("Extensión detectada, iniciando servidor...");
+                    // Marcar que vamos a recargar
+                    const newUrl = window.location.href + (window.location.search ? '&' : '?') + 'reloaded=true';
+                    history.replaceState(null, '', newUrl);
+                    addIframeToPlayer();
+                },
+                () => {
+                    console.log("Extensión no detectada");
+                    hideAllMessages();
+                    document.getElementById("alerta-extension").classList.remove("hidden");
+                }
+            );
+        }
+
+        // Inicializar cuando la página esté lista
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log("Página cargada, inicializando...");
+
+            // Pequeño delay para asegurar que todos los scripts se carguen
+            setTimeout(() => {
+                initializePlayer();
+            }, 100);
+        });
+
+        // Manejo de errores globales
+        window.addEventListener('error', function (e) {
+            console.error('Error global:', e.error);
+        });
+    </script>
+</body>
+
+</html>
