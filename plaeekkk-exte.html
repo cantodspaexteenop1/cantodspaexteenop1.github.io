@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>-</title>
 <style>
-        :root {
-            --nav_pantalla: 80px;
-        }
-
-        body {
+ body {
             background-color: #000;
             color: #fff;
             margin: 0;
@@ -30,7 +26,7 @@
             flex-direction: column;
         }
 
-    #player {
+        #player {
             position: relative;
             width: 100%;
             padding-top: 56.25%; /* Aspect ratio 16:9 */
@@ -48,88 +44,95 @@
             display: none;
         }
 
-        .alert-card {
-            background-color: #333;
-            border-radius: 8px;
-            padding: 20px;
-            max-width: 600px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            margin: 20px auto;
-        }
+.alert-card {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+}
 
-        .alert-card h2 {
-            margin-top: 0;
-            font-size: 24px;
-        }
+.alert-card h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
 
-        .alert-card .boxicon {
-            font-size: 48px;
-            color: #ff0;
-        }
+.alert-card .boxicon {
+    font-size: 48px;
+    color: #ff0;
+}
 
-        .alert-card p {
-            margin: 10px 0;
-            color: #ebebeb;
-        }
+.alert-card p {
+    margin: 10px 0;
+    color: #ebebeb;
+}
 
-        @media (max-width: 480px) {
-            .alert-card {
-                max-width: 90%;
-                padding: 5px;
-                /* margin-right: 50px; */
-            }
+@media (max-width: 480px) {
+    .alert-card {
+        max-width: 90%;
+        padding: 5px;
+        margin-right: 50px;
+    }
 
-            .alert-card h2 {
-                font-size: 20px;
-            }
+    .alert-card h2 {
+        font-size: 20px;
+    }
 
-            .alert-card .boxicon {
-                font-size: 36px;
-            }
+    .alert-card .boxicon {
+        font-size: 36px;
+    }
 
-            .alert-card p {
-                font-size: 14px;
-            }
-        }
+    .alert-card p {
+        font-size: 14px;
+    }
+}
 
-        @media (max-width: 768px) {
-            .alert-card {
-                max-width: 80%;
-                padding: 25px;
-            }
+@media (min-width: 481px) and (max-width: 768px) {
+    .alert-card {
+        max-width: 80%;
+        padding: 25px;
+    }
 
-            .alert-card h2 {
-                font-size: 22px;
-            }
+    .alert-card h2 {
+        font-size: 22px;
+    }
 
-            .alert-card .boxicon {
-                font-size: 42px;
-            }
+    .alert-card .boxicon {
+        font-size: 42px;
+    }
 
-            .alert-card p {
-                font-size: 16px;
-            }
-        }
+    .alert-card p {
+        font-size: 16px; 
+    }
+}
+ a {
+                        color: #ff0 ;
+                        text-decoration: underline;
+                }
 
-        .btn {
-            color: #000 ;
-            text-decoration: underline;
-            background: #0f0;
+
+
+        .retry-button {
+            background:#0f0;
+            color: #000;
             border: 2px solid ;
             padding: 10px 25px;
-            border-radius: 15px;
+            border-radius: 10px;
             font-size: 1rem;
+            font-weight: bold;
             cursor: pointer;
             margin-left: 15px;
             transition: all 0.3s ease;
         }
 
-        .btn:hover {
-              transform: translateY(-2px);
-            box-shadow: 0 8px 30px white;
+        .retry-button:hover {
+            background: #fff;
+            color: #000;
+          transform: translateY(-2px);
+            box-shadow: 0 8px 30px #fff;
         }
-
     </style>
     <script src="https://cantodspaexteenop1.github.io/kkk.js"></script>
 
@@ -138,8 +141,10 @@
 <body>
     <!-- Mensaje de carga -->
     <div id="loading-message" class="message-container">
-        <div class="">
- 
+        <div class="message-box">
+            <div class="loading-spinner"></div>
+            <div class="message-title"></div>
+            <div class="message-text"></div>
         </div>
     </div>
 
@@ -155,7 +160,7 @@
             <p>Recuerda: estos canales estan disponibles en Argentina, Paraguay, Uruguay o con VPN de estos
                 Paises.</p>
             <!-- <p>Una vez instalada la extensión, recarga la página.</p> -->
-            <a class="btn btn-secondary rounded"
+            <a class="btn retry-button"
                 href="https://chromewebstore.google.com/detail/reproductor-mpdm3u8m3uepg/opmeopcambhfimffbomjgemehjkbbmji"
                 target="_blank">Instalar ahora</a>
         </div>
