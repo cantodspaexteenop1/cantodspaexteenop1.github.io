@@ -22,16 +22,18 @@
         }
 
         #player {
-             position: relative;
-             width: 100%;
+            width: 100%;
             height: 100%;
+            position: relative;
         }
-        #player iframe {
-           
+
+        .extension-iframe {
             width: 100%;
             height: 100%;
             border: none;
+            background: black;
         }
+
         .hidden {
             display: none;
         }
@@ -295,7 +297,7 @@
                         console.log("Extensión detectada, cargando canal...");
                         hideAllMessages();
                         playerDiv.classList.remove("hidden");
-                        playerDiv.innerHTML = `<iframe id="iframe" allow="encrypted-media" allowfullscreen src="${extensionUrl}"></iframe>`;
+                        playerDiv.innerHTML = `<iframe id="iframe" class="extension-iframe" allow="encrypted-media" allowfullscreen src="${extensionUrl}"></iframe>`;
                     },
                     () => {
                         console.log("Extensión no detectada después del reinicio");
