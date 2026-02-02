@@ -1,4 +1,3 @@
-
 let channelList = [
     {
         name: '',
@@ -378,13 +377,12 @@ async function getURLwithToken() {
 let mt = [
     "chromecast",
     "cdn",
-
-    // "edge-live01-cte",
-    // "edge-live02-mun",
-    // "edge-mix02-cte",
-    // "edge-mix04-coe",
-    // "edge-mix05-coe",
-    // "edge2-ccast-sl",
+     "edge-live01-cte",
+   "edge-live02-mun",
+   "edge-mix02-cte",
+    "edge-mix04-coe",
+    "edge-mix05-coe",
+    "edge2-ccast-sl",
 
     //No funciona
     // "edge1-ccast-sl",
@@ -441,6 +439,7 @@ async function getValidMpd(channelInfo) {
         let urlWithToken = await getURLwithToken()
 
         let url = `${urlWithToken}/live/c${channelToLoad.number || 3}eds/${atob(channelToLoad.getURL)}/SA_Live_dash_enc/${atob(channelToLoad.getURL)}.mpd`;
+        // let url = `${urlWithToken}/live/c${channelToLoad.number || 3}eds/${atob(channelToLoad.getURL)}/SA_Live_dash_enc_C/${atob(channelToLoad.getURL)}.mpd`;
 
         async function readStream(streamMPD) {
             return streamMPD.read().then(({ value }) => {
@@ -462,7 +461,8 @@ async function getValidMpd(channelInfo) {
             let response = await fetch(url, { signal: AbortSignal.timeout(5000) }); // Cancel at 5s if response timeout
             if (!response.ok || response.status !== 200) throw new Error('MPD token caido')
             const mpd_MP4 = await readStream(response.body.getReader())
-            const mpd_MP4_url = `${response.url.slice(0, response.url.indexOf('SA_Live_dash_enc') + 17)}${mpd_MP4}`
+        const mpd_MP4_url = `${response.url.slice(0, response.url.indexOf('SA_Live_dash_enc') + 17)}${mpd_MP4}`
+        // const mpd_MP4_url = `${response.url.slice(0, response.url.indexOf('SA_Live_dash_enc_C') + 17)}${mpd_MP4}`
             let MP4_response = await fetch(mpd_MP4_url)
             if (MP4_response.ok) {
                 getMPDTries = 0
@@ -483,4 +483,3 @@ async function getValidMpd(channelInfo) {
     const animLoader = document.querySelector('.homeScreen .loader'); animLoader && (animLoader.style.display = 'none');
     throw new Error("No valid MPD URL found. Reloading list...");
 }
-
