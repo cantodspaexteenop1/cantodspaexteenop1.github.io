@@ -377,12 +377,12 @@ async function getURLwithToken() {
 let mt = [
     "chromecast",
     "cdn",
-     "edge-live01-cte",
-   "edge-live02-mun",
-   "edge-mix02-cte",
-    "edge-mix04-coe",
-    "edge-mix05-coe",
-    "edge2-ccast-sl",
+//"edge-live01-cte",
+   //"edge-live02-mun",
+   //"edge-mix02-cte",
+    //"edge-mix04-coe",
+    //"edge-mix05-coe",
+    //"edge2-ccast-sl",
 
     //No funciona
     // "edge1-ccast-sl",
